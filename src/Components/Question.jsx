@@ -11,13 +11,18 @@ import { useState } from "react";
 
 import Options from "../Components/Options";
 
-export default function Question({ question, radioSelected, isSubmitted }) {
+export default function Question({
+  question,
+  radioSelected,
+  isSubmitted,
+  index,
+}) {
   return (
     <div>
       {" "}
       <CardBody>
         <CardTitle className="QuestionHeading" tag="h5">
-          Question
+          Question # {index + 1}
         </CardTitle>
         <CardText className="Question">{question.question}</CardText>
 

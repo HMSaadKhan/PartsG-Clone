@@ -9,6 +9,7 @@
   justify-content: space-around;
   align-items: center;
 }
+
 .FlexBox-SB {
   display: flex;
   justify-content: space-between;
@@ -21,10 +22,14 @@
   height: auto;
   padding: 10px;
   margin: 10px;
+  border-radius: 10px;
 }
 
 .Options {
-  padding: 10px 10px 10px 10px;
+  padding: 10px 5px 5px 10px;
+  accent-color: red;
+  font-size: large;
+  font-family: auto;
 }
 
 .Question {
@@ -39,12 +44,24 @@
   margin: auto;
 }
 
-/* .myButtons {
-  &-black {
-    background-color: black;
-  }
+.myButtons {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 20px;
+}
 
-  &-yellow {
-    background-color: yellow;
-  }
-} */
+.hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

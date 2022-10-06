@@ -70,75 +70,80 @@ export default function QuestionPage() {
   };
   return (
     <div>
-      {isSubmitted && (
-        <>
-          <div>
-            Your Score is {score}/{Questions.length}
-          </div>
-          <div>
-            <Button
-              onClick={() => {
-                window.location.reload();
-              }}
-            >
-              Play Again
-            </Button>
-          </div>
-        </>
-      )}
       <Card className="QCard">
-        {Questions.slice(previous, next).map((question) => {
-          return (
-            <div key={question.id}>
-              <Question
-                question={question}
-                isSubmitted={isSubmitted}
-                radioSelected={radioSelected}
-              />
+        {isSubmitted ? (
+          <div className="FlexBox-SA">
+            <div>
+              Your Score is {score}/{Questions.length}
             </div>
-          );
-        })}
-        <div className="FlexBox-SB">
-          {previous > 0 && (
-            <Button
-              disabled={isSubmitted}
-              onClick={() => {
-                Previous();
-              }}
-            >
-              Previous
-            </Button>
-          )}
+            <div>
+              <Button
+                className="myButtons"
+                onClick={() => {
+                  window.location.reload();
+                }}
+              >
+                Play Again
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <>
+            {Questions.slice(previous, next).map((question) => {
+              return (
+                <div key={question.id}>
+                  <Question
+                    question={question}
+                    isSubmitted={isSubmitted}
+                    radioSelected={radioSelected}
+                    index={previous}
+                  />
+                </div>
+              );
+            })}
+            <div className="FlexBox-SB">
+              {previous > 0 && (
+                <Button
+                  className="myButtons"
+                  disabled={isSubmitted}
+                  onClick={() => {
+                    Previous();
+                  }}
+                >
+                  Previous
+                </Button>
+              )}
 
-          {next !== Questions.length ? (
-            <>
-              <Button
-                color="primary"
-                size="lg"
-                disabled={isSubmitted}
-                onClick={() => {
-                  Next();
-                }}
-              >
-                Next
-              </Button>
-            </>
-          ) : (
-            <>
-              <Button
-                color="success"
-                size="sm"
-                disabled={isSubmitted}
-                onClick={() => {
-                  checkAnswer();
-                  setisSubmitted(true);
-                }}
-              >
-                Submit
-              </Button>
-            </>
-          )}
-        </div>
+              {next !== Questions.length ? (
+                <>
+                  <Button
+                    color="primary"
+                    className="myButtons ButtonHover"
+                    disabled={isSubmitted}
+                    onClick={() => {
+                      Next();
+                    }}
+                  >
+                    Next
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    className="myButtons Hover"
+                    disabled={isSubmitted}
+                    onClick={() => {
+                      checkAnswer();
+                      setisSubmitted(true);
+                    }}
+                  >
+                    Submit
+                  </Button>
+                </>
+              )}
+            </div>
+          </>
+        )}
       </Card>
     </div>
   );

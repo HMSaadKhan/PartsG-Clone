@@ -9,7 +9,7 @@ export default function Options({
   isSubmitted,
 }) {
   return (
-    <div>
+    <div className="Options">
       <input
         type="radio"
         value={option}
