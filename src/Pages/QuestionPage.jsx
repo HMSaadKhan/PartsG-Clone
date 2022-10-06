@@ -1,16 +1,6 @@
 import React from "react";
-import {
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-  ButtonGroup,
-  Button,
-  Row,
-  Container,
-} from "reactstrap";
+import { Card, Button } from "reactstrap";
 import { useState } from "react";
-import Options from "../Components/Options";
 import Question from "../Components/Question";
 
 const Questions = [
@@ -36,36 +26,39 @@ const Questions = [
 
 export default function QuestionPage() {
   const [selected, setselected] = useState("");
-  const [trueOption, settrueOption] = useState("");
   const [next, setnext] = useState(1);
   const [previous, setprevious] = useState(0);
   const [isSubmitted, setisSubmitted] = useState(false);
   const [score, setscore] = useState(0);
+  const [checklist, setchecklist] = useState([]);
 
-  const radioSelected = (event, trueOption) => {
+  const radioSelected = (event, index) => {
     setselected(event.target.value);
-    settrueOption(trueOption);
-    console.log(event.target.value, trueOption);
+    const temp = checklist;
+    temp[index] = event.target.value;
+    setchecklist(temp);
   };
+
   const checkAnswer = () => {
-    console.log(selected);
-    if (selected === trueOption && selected !== "") {
-      setscore(score + 1);
-      setselected("");
-    }
+    let total = score;
+    checklist.forEach((element, index) => {
+      if (element === Questions[index].answer) {
+        total++;
+      }
+    });
+    setscore(total);
   };
   const Next = () => {
     if (next < Questions.length) {
       setnext(next + 1);
       setprevious(previous + 1);
     }
-    checkAnswer();
   };
+
   const Previous = () => {
     if (previous > 0) {
       setnext(next - 1);
       setprevious(previous - 1);
-      setscore(score - 1);
     }
   };
   return (
@@ -96,7 +89,8 @@ export default function QuestionPage() {
                     question={question}
                     isSubmitted={isSubmitted}
                     radioSelected={radioSelected}
-                    index={previous}
+                    Qnumber={previous}
+                    checklist={checklist}
                   />
                 </div>
               );

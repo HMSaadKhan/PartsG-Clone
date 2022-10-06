@@ -1,12 +1,12 @@
 import React from "react";
-import { Button, Col, Row } from "reactstrap";
 import "../App.css";
 
 export default function Options({
   radioSelected,
   option,
-  trueOption,
+  index,
   isSubmitted,
+  checklist,
 }) {
   return (
     <div className="Options">
@@ -14,8 +14,9 @@ export default function Options({
         type="radio"
         value={option}
         name="options"
-        onClick={(e) => radioSelected(e, trueOption)}
+        onClick={(e) => radioSelected(e, index)}
         disabled={isSubmitted}
+        defaultChecked={option === checklist[index]}
       />
       {option}
     </div>

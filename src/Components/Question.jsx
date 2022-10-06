@@ -1,28 +1,20 @@
 import React from "react";
-import {
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-  Row,
-  Container,
-} from "reactstrap";
-import { useState } from "react";
-
+import { CardBody, CardText, CardTitle, Row, Container } from "reactstrap";
 import Options from "../Components/Options";
 
 export default function Question({
   question,
   radioSelected,
   isSubmitted,
-  index,
+  Qnumber,
+  checklist,
 }) {
   return (
     <div>
       {" "}
       <CardBody>
         <CardTitle className="QuestionHeading" tag="h5">
-          Question # {index + 1}
+          Question # {Qnumber + 1}
         </CardTitle>
         <CardText className="Question">{question.question}</CardText>
 
@@ -35,8 +27,9 @@ export default function Question({
                     key={index}
                     option={option}
                     radioSelected={radioSelected}
-                    trueOption={question.answer}
+                    index={Qnumber}
                     isSubmitted={isSubmitted}
+                    checklist={checklist}
                   />
                 );
               })}
