@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 import { useState } from "react";
 import Options from "../Components/Options";
+import Question from "../Components/Question";
 
 const Questions = [
   {
@@ -47,8 +48,10 @@ export default function QuestionPage() {
     console.log(event.target.value, trueOption);
   };
   const checkAnswer = () => {
-    if (selected === trueOption) {
+    console.log(selected);
+    if (selected === trueOption && selected !== "") {
       setscore(score + 1);
+      setselected("");
     }
   };
   const Next = () => {
@@ -83,77 +86,60 @@ export default function QuestionPage() {
           </div>
         </>
       )}
-      {Questions.slice(previous, next).map((question) => {
-        return (
-          <Card
-            key={question.id}
-            style={{
-              backgroundColor: "#eeeeee",
-              width: "20rem",
-            }}
-          >
+      <Card className="QCard">
+        {Questions.slice(previous, next).map((question) => {
+          return (
+            <div key={question.id}>
+              <Question
+                question={question}
+                isSubmitted={isSubmitted}
+                radioSelected={radioSelected}
+              />
+            </div>
+          );
+        })}
+        <div className="FlexBox-SB">
+          {previous > 0 && (
+            <Button
+              disabled={isSubmitted}
+              onClick={() => {
+                Previous();
+              }}
+            >
+              Previous
+            </Button>
+          )}
+
+          {next !== Questions.length ? (
             <>
-              <CardBody>
-                <CardTitle tag="h5">Question</CardTitle>
-                <CardText>{question.question}</CardText>
-
-                <div>
-                  <Container>
-                    <Row xs="2">
-                      {question.options.map((option, index) => {
-                        return (
-                          <Options
-                            key={index}
-                            option={option}
-                            radioSelected={radioSelected}
-                            trueOption={question.answer}
-                            isSubmitted={isSubmitted}
-                          />
-                        );
-                      })}
-                    </Row>
-                  </Container>
-                </div>
-              </CardBody>
-              {previous > 0 && (
-                <Button
-                  disabled={isSubmitted}
-                  onClick={() => {
-                    Previous();
-                  }}
-                >
-                  Previous
-                </Button>
-              )}
-
-              {next !== Questions.length ? (
-                <>
-                  <Button
-                    disabled={isSubmitted}
-                    onClick={() => {
-                      Next();
-                    }}
-                  >
-                    Next
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button
-                    disabled={isSubmitted}
-                    onClick={() => {
-                      checkAnswer();
-                      setisSubmitted(true);
-                    }}
-                  >
-                    Submit
-                  </Button>
-                </>
-              )}
+              <Button
+                color="primary"
+                size="lg"
+                disabled={isSubmitted}
+                onClick={() => {
+                  Next();
+                }}
+              >
+                Next
+              </Button>
             </>
-          </Card>
-        );
-      })}
+          ) : (
+            <>
+              <Button
+                color="success"
+                size="sm"
+                disabled={isSubmitted}
+                onClick={() => {
+                  checkAnswer();
+                  setisSubmitted(true);
+                }}
+              >
+                Submit
+              </Button>
+            </>
+          )}
+        </div>
+      </Card>
     </div>
   );
 }

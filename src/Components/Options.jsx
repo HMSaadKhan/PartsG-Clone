@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Col, Row } from "reactstrap";
+import "../App.css";
 
 export default function Options({
   radioSelected,
@@ -8,7 +9,7 @@ export default function Options({
   isSubmitted,
 }) {
   return (
-    <div style={{ display: "flex" }}>
+    <div>
       <input
         type="radio"
         value={option}
