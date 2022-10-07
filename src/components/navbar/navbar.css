@@ -1,0 +1,47 @@
+.mynavbar {
+  background: repeating-linear-gradient(
+    135deg,
+    #b80001 10px,
+    #b80001 20px,
+    #cc0011 20px,
+    #cc0011 40px
+  );
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-view {
+  display: flex;
+}
+
+.navbar > li > a,
+.navbar > li > a:hover,
+.navbar > li > a:active,
+.navbar > li > a:visited {
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .web-view {
+    display: none;
+  }
+  .mynavbar > ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mobile-view {
+    display: none;
+  }
+}

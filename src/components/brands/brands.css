@@ -1,0 +1,25 @@
+.myimg {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.myCard {
+  width: 14rem;
+  height: 14rem;
+}
+
+.maindiv {
+  margin: 10px;
+}
+.parentDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ImageDiv {
+  height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

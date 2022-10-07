@@ -1,0 +1,35 @@
+.main {
+  height: 400px;
+  background-image: url(../../common/front-image.png);
+}
+
+.content {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.FirstLine {
+  font-size: 35px;
+  color: white;
+  transition: all 1s 0.2s;
+}
+.SecondLine {
+  transition: all 0.8s 0.5s;
+  font-size: 19px;
+  color: white;
+  text-align: center;
+}
+
+.FirstLine > b {
+  color: #cc0011;
+}
+
+.shopNow {
+  background-color: #cc0011;
+  border-radius: 20px 20px 20px 20px;
+  width: 175px;
+  color: white;
+  font-size: 24px;
+}
