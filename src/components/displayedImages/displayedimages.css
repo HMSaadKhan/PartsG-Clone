@@ -1,6 +1,8 @@
 .main {
   height: 400px;
-  background-image: url(../../common/front-image.png);
+}
+.carousel {
+  /* background-image: url(../../common/front-image.png); */
 }
 
 .content {
@@ -32,4 +34,29 @@
   width: 175px;
   color: white;
   font-size: 24px;
+}
+
+.SelectionButton {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+}
+
+.buttonBg {
+  width: auto;
+  /* top: 16px; */
+  position: absolute;
+  background: #ffff;
+  /* padding: 4px; */
+  border-radius: 9px;
+  font-size: 0;
+  list-style: none;
+  /* margin: 0; */
+}
+
+.SelectionButton :focus {
+  background-color: #cc0011;
 }

@@ -10,22 +10,96 @@ import {
 } from "reactstrap";
 import "./displayedimages.css";
 
+const Data = [
+  {
+    id: 0,
+    link: Image,
+    text1: " E-Commerce Platform for",
+    text2: " Industrial Equipments",
+    text3:
+      "PartsG is an interactive e-commerce platform for buying industria sand domestic",
+    text4: " equipment of excellent quality on few clicks.",
+  },
+  {
+    id: 1,
+    link: Image ,
+    text1: " E-Commerce Platform for",
+    text2: " Industrial Equipments",
+    text3:
+      "PartsG is an interactive e-commerce platform for buying industria sand domestic",
+    text4: " equipment of excellent quality on few clicks.",
+  },
+  {
+    id: 2,
+    link: Image,
+    text1: " E-Commerce Platform for",
+    text2: " Industrial Equipments",
+    text3:
+      "PartsG is an interactive e-commerce platform for buying industria sand domestic",
+    text4: " equipment of excellent quality on few clicks.",
+  },
+];
+
 export default function DisplayedImages() {
+  const [prev, setprev] = useState(0);
+  const [next, setnext] = useState(1);
+
   return (
     <div className="main">
-      <div className="content">
-        <div className="FirstLine">
-          E-Commerce Platform for
-          <b>&nbsp;Industrial Equipments</b>
-        </div>
-        <div className="SecondLine">
-          PartsG is an interactive e-commerce platform for buying industrial and
-          domestic
-          <br />
-          equipment of excellent quality on few clicks.
-        </div>
-        <button className="shopNow">Shop Now</button>
-      </div>
+      {console.log(next, prev)}
+      {Data.slice(prev, next).map((data) => {
+        return (
+          <div
+            key={data.id}
+            className="carousel"
+            style={{ backgroundImage: `url(${data.link})` }}
+          >
+            <div className="content">
+              <div className="FirstLine">
+                {data.text1}
+                <b>&nbsp;{data.text2}</b>
+              </div>
+              <div className="SecondLine">
+                {data.text3}
+                <br />
+                {data.text4}
+              </div>
+              <button className="shopNow">Shop Now</button>
+              <div>
+                <div className="buttonBg">
+                  <button
+                    onClick={() => {
+                      setnext(1);
+                      setprev(0);
+                    }}
+                    className="SelectionButton"
+                  >
+                    1
+                  </button>
+                  <button
+                    onClick={() => {
+                      setnext(2);
+                      setprev(1);
+                    }}
+                    className="SelectionButton"
+                  >
+                    2
+                  </button>
+                  <button
+                    onClick={() => {
+                      setnext(3);
+                      setprev(2);
+                    }}
+                    className="SelectionButton"
+                  >
+                    3
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
