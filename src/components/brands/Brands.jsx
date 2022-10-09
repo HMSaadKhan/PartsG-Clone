@@ -3,6 +3,7 @@ import { Button, Card, CardBody } from "reactstrap";
 import "./brands.css";
 import Image from "../../common/MovingImage.jpg";
 import { BrandsData } from "../../common/BrandsData";
+import SmallCard from "../smallcard/SmallCard";
 export default function Brands() {
   return (
     <div>
@@ -10,17 +11,18 @@ export default function Brands() {
         {BrandsData.slice(0, 6).map((Brand) => {
           return (
             <div className="maindiv" key={Brand.id}>
-              <Card className="myCard">
+              <SmallCard Brand={Brand} />
+              {/* <Card className="myCard">
                 <div className="ImageDiv">
                   <img alt="Sample" src={Brand.link} width="200" />
                 </div>
-              </Card>
+              </Card> */}
             </div>
           );
         })}
       </div>
       <div className="parentDiv">
-        <Button>View All Brands</Button>
+        <button className="Btn"> View All Brands</button>
       </div>
     </div>
   );

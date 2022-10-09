@@ -1,0 +1,10 @@
+.ImageDiv {
+  height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myCard {
+  width: 14rem;
+  height: 14rem;
+}
