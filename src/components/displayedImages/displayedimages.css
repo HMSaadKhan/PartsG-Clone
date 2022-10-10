@@ -1,21 +1,27 @@
 .main {
-  height: 400px;
+  height: 320px;
+  width: 100%;
 }
 .carousel {
+  background-size: cover;
+  position: absolute;
   /* background-image: url(../../common/front-image.png); */
 }
 
 .content {
-  height: 400px;
+  /* width: auto; */
+  height: 320px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  padding: 10px;
 }
 .FirstLine {
   font-size: 35px;
   color: white;
   transition: all 1s 0.2s;
+  text-align: center;
 }
 .SecondLine {
   transition: all 0.8s 0.5s;
@@ -31,7 +37,7 @@
 .shopNow {
   background-color: #cc0011;
   border-radius: 20px 20px 20px 20px;
-  width: 175px;
+  width: 160px;
   color: white;
   font-size: 24px;
 }
@@ -46,17 +52,34 @@
 }
 
 .buttonBg {
-  width: auto;
-  /* top: 16px; */
-  position: absolute;
+  width: 50px;
   background: #ffff;
-  /* padding: 4px; */
+  padding: 4px;
   border-radius: 9px;
   font-size: 0;
   list-style: none;
-  /* margin: 0; */
+  display: flex;
+  justify-content: space-around;
 }
 
-.SelectionButton :focus {
+.buttonBg :focus {
   background-color: #cc0011;
+}
+
+@media screen and (max-width: 767px) {
+  .FirstLine {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+  .SecondLine {
+    font-size: 14px;
+  }
+  .content,
+  .main {
+    height: 395px;
+  }
+  .content {
+    padding-top: 50px;
+  }
 }

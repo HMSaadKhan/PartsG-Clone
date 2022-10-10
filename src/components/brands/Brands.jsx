@@ -4,23 +4,20 @@ import "./brands.css";
 import Image from "../../common/MovingImage.jpg";
 import { BrandsData } from "../../common/BrandsData";
 import SmallCard from "../smallcard/SmallCard";
+import Carousel from "react-elastic-carousel";
+import { breakPoints } from "../../common/BreakPoints";
 export default function Brands() {
   return (
     <div>
-      <div className="parentDiv">
-        {BrandsData.slice(0, 6).map((Brand) => {
+      <Carousel breakPoints={breakPoints} enableAutoPlay>
+        {BrandsData.map((Brand) => {
           return (
             <div className="maindiv" key={Brand.id}>
-              <SmallCard Brand={Brand} />
-              {/* <Card className="myCard">
-                <div className="ImageDiv">
-                  <img alt="Sample" src={Brand.link} width="200" />
-                </div>
-              </Card> */}
+              <SmallCard link={Brand.link} />
             </div>
           );
         })}
-      </div>
+      </Carousel>
       <div className="parentDiv">
         <button className="Btn"> View All Brands</button>
       </div>

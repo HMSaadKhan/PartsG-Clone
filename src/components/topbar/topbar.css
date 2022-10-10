@@ -1,11 +1,10 @@
 .mytopbar {
   height: 80px;
-  width: 100%;
   display: flex;
   align-items: center;
-  padding: 5px 0px;
-  padding-left: 2em;
-  padding-right: 2em;
+  /* justify-content: space-between; */
+  /* padding-left: 2em;
+  padding-right: 2em; */
 }
 
 .FlexBox-SA {
@@ -14,6 +13,9 @@
   align-items: center;
 }
 
+.Img {
+  height: 80px;
+}
 .FlexColumn {
   display: flex;
   /* flex-direction: column; */
@@ -23,7 +25,7 @@
   border-radius: 0px 55px 50px 0px;
   background-color: #cc0011;
   width: 60px;
-  height: 35px;
+  height: 40px;
   border: none;
   color: white;
 }
@@ -31,7 +33,7 @@
 .search {
   display: flex;
   flex-grow: 1;
-  margin-right: 10px;
+  /* margin-left: 30px; */
 }
 .search > input {
   padding: 0 10px 0 29px;
@@ -41,7 +43,7 @@
 
 .searchBar {
   width: 450px;
-  height: 35px;
+  height: 40px;
   border: 1px solid #cdcdcd;
 }
 
@@ -50,13 +52,16 @@
   background-color: white;
   color: #000;
   border: 1px solid #cdcdcd;
-  height: 35px;
+  height: 40px;
   width: 150px;
 }
 
 .Options {
-  margin: 20px;
+  /* margin: 20px; */
   border-right: 2px groove;
+}
+.OptionMain {
+  /* margin: 20px; */
 }
 
 .Options > div > span {
@@ -64,7 +69,7 @@
 }
 
 .Options > div {
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 .offcanvas-menu {
@@ -85,16 +90,14 @@
   img {
     width: 150px;
   }
+  .mytopbar,
+  .Img {
+    height: 50px;
+    /* padding: 10px; */
+  }
 }
 @media screen and (min-width: 480px) {
   .mobile-view-slider {
     display: none;
   }
-}
-
-input.hide-clear[type="search"]::-webkit-search-decoration,
-input.hide-clear[type="search"]::-webkit-search-cancel-button,
-input.hide-clear[type="search"]::-webkit-search-results-button,
-input.hide-clear[type="search"]::-webkit-search-results-decoration {
-  display: none;
 }

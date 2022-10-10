@@ -17,16 +17,16 @@ const Data = [
     text1: " E-Commerce Platform for",
     text2: " Industrial Equipments",
     text3:
-      "PartsG is an interactive e-commerce platform for buying industria sand domestic",
+      "PartsG is an interactive e-commerce platform for buying industrial and domestic",
     text4: " equipment of excellent quality on few clicks.",
   },
   {
     id: 1,
-    link: Image ,
+    link: Image,
     text1: " E-Commerce Platform for",
     text2: " Industrial Equipments",
     text3:
-      "PartsG is an interactive e-commerce platform for buying industria sand domestic",
+      "PartsG is an interactive e-commerce platform for buying industrial and domestic",
     text4: " equipment of excellent quality on few clicks.",
   },
   {
@@ -35,7 +35,7 @@ const Data = [
     text1: " E-Commerce Platform for",
     text2: " Industrial Equipments",
     text3:
-      "PartsG is an interactive e-commerce platform for buying industria sand domestic",
+      "PartsG is an interactive e-commerce platform for buying industrial and domestic",
     text4: " equipment of excellent quality on few clicks.",
   },
 ];
@@ -46,7 +46,6 @@ export default function DisplayedImages() {
 
   return (
     <div className="main">
-      {console.log(next, prev)}
       {Data.slice(prev, next).map((data) => {
         return (
           <div
@@ -54,18 +53,22 @@ export default function DisplayedImages() {
             className="carousel"
             style={{ backgroundImage: `url(${data.link})` }}
           >
-            <div className="content">
-              <div className="FirstLine">
-                {data.text1}
-                <b>&nbsp;{data.text2}</b>
-              </div>
-              <div className="SecondLine">
-                {data.text3}
-                <br />
-                {data.text4}
-              </div>
-              <button className="shopNow">Shop Now</button>
-              <div>
+            <div>
+              <div className="content">
+                <div>
+                  <div className="FirstLine">
+                    {data.text1}
+                    <b>&nbsp;{data.text2}</b>
+                  </div>
+                  <div className="SecondLine">
+                    {data.text3}
+                    <br />
+                    {data.text4}
+                  </div>
+                </div>
+                <div>
+                  <button className="shopNow">Shop Now</button>
+                </div>
                 <div className="buttonBg">
                   <button
                     onClick={() => {

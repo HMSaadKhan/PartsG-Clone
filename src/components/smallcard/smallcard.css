@@ -3,8 +3,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .myCard {
   width: 14rem;
   height: 14rem;
+}
+img {
+  object-fit: contain;
+}
+
+@media screen and (min-width: 767px) {
+  img {
+    width: 150px;
+  }
+}
+
+.CardText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #cc0011;
 }

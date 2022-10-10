@@ -5,11 +5,11 @@ import { List } from "react-bootstrap-icons";
 import SideBar from "./SideBar";
 export default function Logo() {
   return (
-    <div className="FlexBox-SA">
+    <div className="FlexBox-SA Logo">
       <div className="mobile-view-slider">
         <SideBar />
       </div>
-      <img src={LogoImg} height="60px" />
+      <img src={LogoImg} className="Img" />
     </div>
   );
 }

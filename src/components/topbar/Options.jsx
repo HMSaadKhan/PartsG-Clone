@@ -4,7 +4,7 @@ import { File, Cart3 } from "react-bootstrap-icons";
 
 export default function Options() {
   return (
-    <div className="FlexBox-SA">
+    <div className="FlexBox-SA OptionMain">
       <div className="FlexBox-SA Options">
         <div>
           <Cart3 size={25} />
