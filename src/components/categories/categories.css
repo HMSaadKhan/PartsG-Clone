@@ -4,6 +4,8 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .maindiv {
   margin: 10px;

@@ -8,7 +8,7 @@ import Carousel from "react-elastic-carousel";
 import { breakPoints } from "../../common/BreakPoints";
 export default function Brands() {
   return (
-    <div>
+    <div className="brandsmain">
       <Carousel breakPoints={breakPoints} enableAutoPlay>
         {BrandsData.map((Brand) => {
           return (

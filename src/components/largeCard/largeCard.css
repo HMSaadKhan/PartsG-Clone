@@ -1,5 +1,5 @@
 .myLargeCard {
-  width: 296px;
+  width: 270px;
   height: 300px;
 }
 
@@ -54,7 +54,7 @@
 
 .LargeCardButtons > div {
   border: 1px solid #dddd;
-  width: calc(296px / 3);
+  width: calc(270px / 3);
   height: 100px;
   background-color: white;
   display: flex;
