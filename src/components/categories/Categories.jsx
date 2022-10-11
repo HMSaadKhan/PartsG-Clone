@@ -12,8 +12,8 @@ const Categories = () => {
       <div className="Header">
         <div></div>
         <div>
-          <h2 className="Heading">CATEGORIES</h2>
-          <h6 className="Caption">
+          <h2 className="CnPHeading">CATEGORIES</h2>
+          <h6 className="CnPCaption">
             Diverse Range of Categories Available on the Platform
           </h6>
         </div>

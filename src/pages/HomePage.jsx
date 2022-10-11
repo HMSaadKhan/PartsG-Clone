@@ -5,7 +5,8 @@ import DisplayedImages from "../components/displayedImages/DisplayedImages";
 import NavBar from "../components/navbar/NavBar";
 import Products from "../components/products/Products";
 import TopBar from "../components/topbar/TopBar";
-
+import BottomForm from "../components/form/BottomForm";
+import Footer from "../components/footer/Footer";
 export default function HomePage() {
   return (
     <div>
@@ -15,6 +16,8 @@ export default function HomePage() {
       <Brands />
       <Categories />
       <Products />
+      <BottomForm />
+      <Footer />
     </div>
   );
 }

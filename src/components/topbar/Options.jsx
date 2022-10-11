@@ -39,42 +39,6 @@ export default function Options() {
           </div>
         </div>
       </div>
-      {/* <div className="FlexBox-SA Options">
-        <div>
-          <Cart size={25} />
-        </div>
-        <div className="FlexColumn">
-          <h6>cart</h6>
-          <p>add Product</p>
-        </div>
-      </div>
-      <div className="FlexBox-SA Options">
-        <div>
-          <Cart size={25} />
-        </div>
-        <div className="FlexColumn">
-          <h6>cart</h6>
-          <p>add Product</p>
-        </div>
-      </div> */}
-      {/* <div className="FlexBox-SA">
-        <div>
-          <Clipboard2Check />
-        </div>
-        <div>
-          <div>cart</div>
-          <div>add Product</div>
-        </div>
-      </div>
-      <div className="FlexBox-SA">
-        <div>
-          <Clipboard2Check />
-        </div>
-        <div>
-          <div>cart</div>
-          <div>add Product</div>
-        </div>
-      </div> */}
     </div>
   );
 }

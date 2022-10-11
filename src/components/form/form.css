@@ -1,0 +1,50 @@
+.Formmain {
+  padding: 30px 200px 30px;
+  background-image: url("https://partsg.com/images/products/on-demand-order.png");
+}
+
+.Heading2 {
+  color: white;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: left;
+  margin: 10px;
+}
+.formHeading {
+  color: white;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+}
+
+.formCaption {
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 50px;
+}
+
+.InputFieldMain {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.InputField {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+label {
+  color: white;
+  text-align: left;
+}
+.InputField > input {
+  background-color: white;
+  overflow: visible;
+  padding: 8px 10px;
+  border-radius: 7px;
+}

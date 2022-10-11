@@ -1,67 +1,8 @@
-/* .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.FlexBox-SA {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.FlexBox-SB {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.QCard {
-  background-color: rgb(238, 238, 238);
-  width: 20rem;
-  height: auto;
-  padding: 10px;
-  margin: 10px;
+::-webkit-scrollbar-thumb {
+  background-color: #cc0011;
   border-radius: 10px;
 }
 
-.Options {
-  padding: 10px 5px 5px 10px;
-  accent-color: red;
-  font-size: large;
-  font-family: auto;
+::-webkit-scrollbar {
+  width: 5px;
 }
-
-.Question {
-  font-size: x-large;
-  font-weight: bold;
-  margin: auto;
-}
-
-.QuestionHeading {
-  font-size: xx-large;
-  color: red;
-  margin: auto;
-}
-
-.myButtons {
-  background-color: red;
-  border: none;
-  color: white;
-  padding: 10px 35px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  border-radius: 20px;
-}
-
-.hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-} */

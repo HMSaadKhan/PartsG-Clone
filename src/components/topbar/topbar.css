@@ -1,8 +1,9 @@
 .mytopbar {
-  height: 80px;
+  height: 100px;
+  padding: 20px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* padding-left: 2em;
   padding-right: 2em; */
 }
@@ -14,7 +15,8 @@
 }
 
 .Img {
-  height: 80px;
+  height: 100px;
+  width: 300px;
 }
 .FlexColumn {
   display: flex;
@@ -32,7 +34,7 @@
 
 .search {
   display: flex;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   /* margin-left: 30px; */
 }
 .search > input {
@@ -57,19 +59,17 @@
 }
 
 .Options {
-  /* margin: 20px; */
+  margin: 15px;
   border-right: 2px groove;
 }
-.OptionMain {
+.Options > div {
   /* margin: 20px; */
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .Options > div > span {
   font-weight: bold;
-}
-
-.Options > div {
-  /* margin: 5px; */
 }
 
 .offcanvas-menu {
@@ -84,6 +84,7 @@
     color: #cc0011;
     width: 60px;
     height: 35px;
+    margin: 0;
     border: none;
     background-color: white;
   }
@@ -93,7 +94,10 @@
   .mytopbar,
   .Img {
     height: 50px;
-    /* padding: 10px; */
+    width: 150px;
+  }
+  .Options {
+    margin: 5px;
   }
 }
 @media screen and (min-width: 480px) {

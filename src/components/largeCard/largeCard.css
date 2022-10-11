@@ -1,4 +1,101 @@
-.myCard {
-  width: 15rem;
-  height: 20rem;
+.myLargeCard {
+  width: 296px;
+  height: 300px;
+}
+
+.badgeMain {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  display: flex;
+  flex-direction: row;
+}
+
+.badgeMain::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #cc0011;
+}
+
+.mybadge {
+  background-color: #cc0011;
+  border-radius: 0px;
+  padding: 0px 8px 0px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: white;
+  height: 20px;
+  font-size: 15px;
+}
+
+.maindiv {
+  margin: 10px;
+}
+
+.LargeCardImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.LargeCardImage > img {
+  width: 70%;
+  object-fit: contain;
+}
+
+.LargeCardButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.LargeCardButtons > div {
+  border: 1px solid #dddd;
+  width: calc(296px / 3);
+  height: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.LargeCardButtons > div > p {
+  font-weight: bold;
+  font-size: x-small;
+  margin-top: 10px;
+}
+.LargeCardButtons > div:hover {
+  cursor: pointer;
+  border-top: 5px solid #cc0011;
+}
+.disabled > div {
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+.productName,
+.modelNumber,
+.price {
+  text-align: center;
+  line-height: 19px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.price {
+  color: #cc0011;
+}
+
+.modelNumber {
+  font-size: 15px;
+  color: #9a9a9a;
+}
+
+.productName:hover,
+.modelNumber:hover {
+  color: #cc0011;
 }
