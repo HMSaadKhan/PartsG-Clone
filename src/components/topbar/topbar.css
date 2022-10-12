@@ -7,8 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding-left: 2em;
-  padding-right: 2em; */
 }
 
 .FlexBox-SA {
@@ -24,6 +22,17 @@
 .FlexColumn {
   display: flex;
   /* flex-direction: column; */
+}
+
+.togglebutton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.togglebutton > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .searchButton {
@@ -53,22 +62,33 @@
 }
 
 .CategoryBtn > button {
+  text-align: left;
   border-radius: 50px 0px 0px 50px;
   background-color: white;
   color: #000;
   border: 1px solid #cdcdcd;
   height: 40px;
-  width: 150px;
+  width: 200px;
+}
+.CategoryBtn > button:hover,
+.CategoryBtn > button:active {
+  background-color: #f5f5f5;
+  color: #000;
+  border: 1px solid #cdcdcd;
 }
 
 .Options {
-  margin: 15px;
+  margin: 10px;
   border-right: 2px groove;
 }
 .Options > div {
   /* margin: 20px; */
+
   margin-left: 5px;
   margin-right: 5px;
+}
+.Options > b {
+  margin-bottom: 0px;
 }
 
 .Options > div > span {

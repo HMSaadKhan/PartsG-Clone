@@ -6,3 +6,8 @@
 ::-webkit-scrollbar {
   width: 5px;
 }
+
+.rec-arrow,
+.rec > .rec-pagination {
+  display: none;
+}

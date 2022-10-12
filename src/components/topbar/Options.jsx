@@ -1,40 +1,42 @@
 import React from "react";
 import "./topbar.css";
-import { File, Cart3 } from "react-bootstrap-icons";
+
+import { Icons } from "../../common";
 
 export default function Options() {
+  const { BS, GR } = Icons;
+
   return (
     <div className="FlexBox-SA OptionMain">
       <div className="FlexBox-SA Options">
         <div>
-          <Cart3 size={25} />
-          {/* <div>Logo</div> */}
+          <BS.BsCart3 size={25} />
         </div>
         <div className="mobile-view">
           <div className="ColumnFlex">
-            <div>Cart</div>
+            <b>Cart</b>
             <div>Add Product</div>
           </div>
         </div>
       </div>
       <div className="FlexBox-SA Options">
         <div>
-          <File size={25} />
+          <GR.GrDocumentText size={25} />
         </div>
         <div className="mobile-view">
           <div className="ColumnFlex">
-            <div>Quote</div>
+            <b>Quote</b>
             <div>Request Quote</div>
           </div>
         </div>
       </div>
       <div className="FlexBox-SA Options">
         <div>
-          <File size={25} />
+          <GR.GrDocumentText size={25} />
         </div>
         <div className="mobile-view">
           <div className="ColumnFlex">
-            <div>Custom</div>
+            <b>Custom</b>
             <div>Request quote</div>
           </div>
         </div>

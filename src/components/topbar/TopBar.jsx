@@ -1,9 +1,8 @@
 import React from "react";
 import "./topbar.css";
 
-import SearchBar from "./SearchBar";
-import Logo from "./Logo";
-import Options from "./Options";
+import { SearchBar, Logo, Options } from "../topbar";
+
 export default function TopBar() {
   return (
     <div className="mytopbar">

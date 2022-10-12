@@ -1,28 +1,20 @@
 import React, { useRef } from "react";
-import { CategoriesData } from "../../common/CategoriesData";
-import SmallCard from "../smallcard/SmallCard";
-import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
-import "./product.css";
-import { breakPointsForLargeCard } from "../../common/BreakPoints";
 import Carousel from "react-elastic-carousel";
+
+import "./product.css";
 import LargeCard from "../largeCard/LargeCard";
-import { ProductsData } from "../../common/ProductsData";
+import { ProductsData, breakPointsForLargeCard } from "../../common";
+import { Footer, Header } from "../../components/CandPheaderandFooter";
 
 export default function Products() {
   const carRef = useRef();
+
   return (
     <div className="categoriesMain">
-      <div className="Header">
-        <div></div>
-        <div>
-          <h2 className="CnPHeading">Products</h2>
-          <h6 className="CnPCaption">
-            Diverse Range of Products Available on the Platform
-          </h6>
-        </div>
-        <div>{/* <button>View All Categories</button> */}</div>
-      </div>
-      {/* <LargeCard /> */}
+      <Header
+        heading={"Products"}
+        caption={"Diverse Range of Products Available on the Platform"}
+      />
       <Carousel breakPoints={breakPointsForLargeCard} ref={carRef}>
         {ProductsData.map((data) => {
           return (
@@ -38,21 +30,7 @@ export default function Products() {
           );
         })}
       </Carousel>{" "}
-      <div className="parentDiv">
-        <MdNavigateBefore
-          className="roundedBtn"
-          onClick={() => {
-            carRef.current.slidePrev();
-          }}
-        />
-
-        <MdNavigateNext
-          className="roundedBtn"
-          onClick={() => {
-            carRef.current.slideNext();
-          }}
-        />
-      </div>
+      <Footer carRef={carRef} />
     </div>
   );
 }

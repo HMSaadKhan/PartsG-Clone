@@ -1,20 +1,22 @@
 import React from "react";
 import { Card } from "reactstrap";
+
 import "./largeCard.css";
-import { BsCart3, BsArchive } from "react-icons/bs";
-import { RiShoppingBag3Line } from "react-icons/ri";
+import { Icons } from "../../common";
+
 const size = "25px";
 const color = "#cc0011";
-export default function LargeCard({ name, price, model, link, stock }) {
-  console.log(stock);
+
+const LargeCard = ({ name, price, model, link, stock }) => {
+  const { BS, RI } = Icons;
   return (
     <div>
       <Card className="myLargeCard">
-          {stock < 1 &&
-        <div className="badgeMain">
-             <div className="mybadge">Out of Stock</div>
-        </div>
-             }
+        {stock < 1 && (
+          <div className="badgeMain">
+            <div className="mybadge">Out of Stock</div>
+          </div>
+        )}
         <div className="LargeCardImage">
           <img alt="Sample" src={link} />
           <div>
@@ -25,23 +27,25 @@ export default function LargeCard({ name, price, model, link, stock }) {
             </div>
 
             <div className={`LargeCardButtons`}>
-              <div className={`${stock < 1 ? "disabled" : ""}`}>
-                <BsCart3 color={color} size={size} />
+              <button disabled={stock < 1 ? true : false}>
+                <BS.BsCart3 color={color} size={size} />
                 <p>Add to cart</p>
-              </div>
-              <div className={`${stock < 1 ? "disabled" : ""}`}>
-                <RiShoppingBag3Line color={color} size={size} />
+              </button>
+              <button disabled={stock < 1 ? true : false}>
+                <RI.RiShoppingBag3Line color={color} size={size} />
                 <p>Buy Now</p>
-              </div>
+              </button>
 
-              <div>
-                <BsArchive color={color} size={size} />
+              <button>
+                <BS.BsArchive color={color} size={size} />
                 <p>Req Quote</p>
-              </div>
+              </button>
             </div>
           </div>
         </div>
       </Card>
     </div>
   );
-}
+};
+
+export default LargeCard;

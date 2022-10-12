@@ -1,13 +1,18 @@
-.main {
+.Imagemain {
   height: 320px;
   width: 100%;
 }
 .carousel {
   background-size: cover;
   position: absolute;
+  width: 100%;
+  height: 320px;
   /* background-image: url(../../common/front-image.png); */
 }
 
+.rec-pagination {
+  display: block;
+}
 .content {
   /* width: auto; */
   height: 320px;

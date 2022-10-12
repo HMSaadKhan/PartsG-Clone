@@ -7,12 +7,6 @@
   border-radius: 0px !important;
 }
 
-.myimg {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-}
-
 .maindiv {
   margin: 10px;
 }
@@ -36,9 +30,4 @@
   padding-bottom: 10px;
   width: 150px;
   margin-top: 35px;
-}
-
-.rec-arrow,
-.rec > .rec-pagination {
-  display: none;
 }

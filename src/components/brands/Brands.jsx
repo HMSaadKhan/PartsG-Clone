@@ -1,11 +1,10 @@
 import React from "react";
-import { Button, Card, CardBody } from "reactstrap";
-import "./brands.css";
-import Image from "../../common/MovingImage.jpg";
-import { BrandsData } from "../../common/BrandsData";
-import SmallCard from "../smallcard/SmallCard";
 import Carousel from "react-elastic-carousel";
-import { breakPoints } from "../../common/BreakPoints";
+
+import "./brands.css";
+import { BrandsData, breakPoints } from "../../common";
+import SmallCard from "../smallcard/SmallCard";
+
 export default function Brands() {
   return (
     <div className="brandsmain">

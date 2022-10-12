@@ -1,0 +1,70 @@
+.Header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.CnPHeading {
+  text-align: center;
+  text-transform: uppercase;
+}
+.CnPCaption {
+  text-align: center;
+  color: #7f8185;
+  font-size: 21px;
+  white-space: nowrap;
+  text-align: center;
+}
+.roundedBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 0;
+  border: 1px solid #dddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: #dddd;
+  background: white;
+  transition: all 0.15s;
+}
+
+.roundedBtn:focus,
+.roundedBtn:hover {
+  background-color: #cc0011;
+}
+
+.button {
+  background-color: #cc0011;
+  color: white;
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 40px;
+  font-size: large;
+  margin-right: 15px;
+  right: 2;
+}
+
+.emptyDiv {
+  width: 15%;
+}
+
+@media screen and (max-width: 767px) {
+  .CnPCaption {
+    display: none;
+  }
+  .Header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .CnPHeading {
+    align-items: center;
+  }
+}

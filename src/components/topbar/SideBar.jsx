@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap";
+import { Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap";
 import { List } from "react-bootstrap-icons";
 import "./topbar.css";
 

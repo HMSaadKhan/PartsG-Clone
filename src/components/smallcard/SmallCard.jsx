@@ -1,6 +1,8 @@
 import React from "react";
-import { Button, Card, CardBody } from "reactstrap";
+import { Card } from "reactstrap";
+
 import "./smallcard.css";
+
 export default function SmallCard({ link, name }) {
   return (
     <div>
