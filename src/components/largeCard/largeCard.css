@@ -46,6 +46,9 @@
   width: 70%;
   object-fit: contain;
 }
+.ImageDiv {
+  padding: 20px;
+}
 
 .LargeCardButtons {
   display: flex;

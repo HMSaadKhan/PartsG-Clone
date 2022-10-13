@@ -2,7 +2,11 @@ import React from "react";
 
 export default function ImageComponent({ data, setnext, setprev }) {
   return (
-    <>
+    <div
+      key={data.id}
+      className="carousel"
+      style={{ backgroundImage: `url(${data.link})` }}
+    >
       <div>
         <div className="content">
           <div>
@@ -50,6 +54,6 @@ export default function ImageComponent({ data, setnext, setprev }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

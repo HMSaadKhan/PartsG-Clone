@@ -29,6 +29,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .togglebutton > span {
   white-space: nowrap;
   overflow: hidden;
@@ -71,7 +72,7 @@
   width: 200px;
 }
 .CategoryBtn > button:hover,
-.CategoryBtn > button:active {
+.CategoryBtn > button:focus {
   background-color: #f5f5f5;
   color: #000;
   border: 1px solid #cdcdcd;
@@ -80,6 +81,7 @@
 .Options {
   margin: 10px;
   border-right: 2px groove;
+  cursor: pointer;
 }
 .Options > div {
   /* margin: 20px; */
@@ -96,7 +98,29 @@
 }
 
 .offcanvas-menu {
-  background-color: #51cf29;
+  background-color: #cc0011 !important;
+}
+
+.List {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.ListItem {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.ListItem > div {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.ListItemFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1140px) {

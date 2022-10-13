@@ -11,3 +11,11 @@
 .rec > .rec-pagination {
   display: none;
 }
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #060608;
+}

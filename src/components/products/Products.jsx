@@ -15,7 +15,7 @@ export default function Products() {
         heading={"Products"}
         caption={"Diverse Range of Products Available on the Platform"}
       />
-      <Carousel breakPoints={breakPointsForLargeCard} ref={carRef}>
+      <Carousel breakPoints={breakPointsForLargeCard} ref={carRef} enableAutoPlay>
         {ProductsData.map((data) => {
           return (
             <div className="maindiv" key={data.id}>

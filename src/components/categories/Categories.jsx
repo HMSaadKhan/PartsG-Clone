@@ -15,7 +15,16 @@ const Categories = () => {
         caption={"Diverse Range of Categories Available on the Platform"}
       />
 
-      <Carousel breakPoints={breakPoints} ref={carRef}>
+      <Carousel
+        breakPoints={breakPoints}
+        ref={carRef}
+        onChange={(pageIndex) => {
+          console.log(pageIndex);
+          if (pageIndex === 4) {
+            carRef.goToPage(0);
+          }
+        }}
+      >
         {CategoriesData.map((data) => {
           return (
             <div className="maindiv" key={data.id}>

@@ -1,8 +1,10 @@
 import React from "react";
 import { Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap";
 import { List } from "react-bootstrap-icons";
-import "./topbar.css";
 
+import "./topbar.css";
+import { SideBarOption } from "../topbar";
+import SideBarDropDown from "./SideBarDropDown";
 export default function SideBar() {
   const [open, setOpen] = React.useState(false);
   return (
@@ -19,17 +21,23 @@ export default function SideBar() {
       <>
         <Offcanvas className="offcanvas-menu" isOpen={open}>
           <OffcanvasHeader
+            style={{ color: "white" }}
             toggle={() => {
               setOpen(false);
             }}
           >
-            <div className="FlexBox-SA">
+            <div className="FlexBox-SA" style={{ width: "350px" }}>
               <div>Menu</div>
               <div>Login/Logout</div>
             </div>
           </OffcanvasHeader>
           <OffcanvasBody>
-            <strong>This is the Offcanvas body.</strong>
+            <div className="List">
+              <SideBarOption name="Home" />
+              <SideBarDropDown />
+              <SideBarOption name="Brands" />
+              <SideBarOption name="Products" />
+            </div>
           </OffcanvasBody>
         </Offcanvas>
       </>

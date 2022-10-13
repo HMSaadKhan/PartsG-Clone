@@ -18,7 +18,9 @@ const LargeCard = ({ name, price, model, link, stock }) => {
           </div>
         )}
         <div className="LargeCardImage">
-          <img alt="Sample" src={link} />
+          <div className="ImageDiv">
+            <img alt="Sample" src={link} />
+          </div>
           <div>
             <div>
               <p className="productName">{name}</p>

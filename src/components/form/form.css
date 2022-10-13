@@ -88,11 +88,16 @@ textarea:focus {
   color: white;
   font-size: 16px;
 }
+
 .CheckBox > input {
   margin-left: 5px;
   margin-right: 5px;
   width: 25px;
   height: 25px;
+}
+
+checkbox:checked {
+  background-color: #cc0011;
 }
 
 .CheckBoxMain {
@@ -104,6 +109,10 @@ textarea:focus {
 .CheckBoxMain > div {
   display: flex;
 }
+.CheckBoxMain > div > button:hover {
+  background-color: #060608;
+}
+
 .CheckBoxMain > div > button {
   background-color: #cc0011;
   color: white;
@@ -112,11 +121,4 @@ textarea:focus {
   border-radius: 40px;
   font-size: large;
   margin-right: 50px;
-}
-
-.CheckBox > input:checked {
-  appearance: none;
-  background-color: #cc0011;
-  position: relative;
-  border-radius: 0 !important;
 }

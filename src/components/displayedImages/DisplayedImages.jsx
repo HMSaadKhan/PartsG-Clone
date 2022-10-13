@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Carousel from "react-elastic-carousel";
 
-import { ImageData } from "../../common";
+import { ImageData, breakPointsforImages } from "../../common";
 import "./displayedimages.css";
 import ImageComponent from "./ImageComponent";
 

@@ -47,6 +47,10 @@
   font-size: 24px;
 }
 
+.shopNow:hover{
+  background-color: #060608
+}
+
 .SelectionButton {
   width: 10px;
   height: 10px;
