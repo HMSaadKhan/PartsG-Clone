@@ -16,4 +16,21 @@
   justify-content: center;
 }
 
-
+@media screen and (max-width: 430px) {
+  .categoriesMain {
+    margin-left: 35px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .categoriesMain {
+    margin-left: 17px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .brandsmain {
+    margin-left: 9px;
+    margin-right: 0px;
+  }
+}

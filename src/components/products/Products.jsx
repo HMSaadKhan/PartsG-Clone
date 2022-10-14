@@ -10,7 +10,7 @@ export default function Products() {
   const carRef = useRef();
 
   return (
-    <div className="categoriesMain">
+    <div className="productsMain">
       <Header
         heading={"Products"}
         caption={"Diverse Range of Products Available on the Platform"}

@@ -8,6 +8,7 @@ import { Footer, Header } from "../../components/CandPheaderandFooter";
 
 const Categories = () => {
   const carRef = useRef();
+
   return (
     <div className="categoriesMain">
       <Header
@@ -15,16 +16,7 @@ const Categories = () => {
         caption={"Diverse Range of Categories Available on the Platform"}
       />
 
-      <Carousel
-        breakPoints={breakPoints}
-        ref={carRef}
-        onChange={(pageIndex) => {
-          console.log(pageIndex);
-          if (pageIndex === 4) {
-            carRef.goToPage(0);
-          }
-        }}
-      >
+      <Carousel breakPoints={breakPoints} ref={carRef} enableAutoPlay>
         {CategoriesData.map((data) => {
           return (
             <div className="maindiv" key={data.id}>

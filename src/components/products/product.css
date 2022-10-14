@@ -1,7 +1,7 @@
-.categoriesMain {
+.productsMain {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -15,4 +15,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 325px) {
+  .productsMain {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

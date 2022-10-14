@@ -77,7 +77,6 @@
 .LargeCardButtons > button:disabled {
   opacity: 0.7;
   cursor: pointer;
-
   background-color: #eeeeee;
 }
 
@@ -103,3 +102,21 @@
 .modelNumber:hover {
   color: #cc0011;
 }
+
+@media screen and (max-width: 380px) {
+  .myLargeCard {
+    width: 220px;
+  }
+  .LargeCardButtons > button {
+    width: calc(220px / 3);
+  }
+}
+
+/* @media screen and (max-width: 325px) {
+  .myLargeCard {
+    width: 220px;
+  }
+  .LargeCardButtons > button {
+    width: calc(220px / 3);
+  }
+} */

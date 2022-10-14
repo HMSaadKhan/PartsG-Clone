@@ -12,15 +12,34 @@ img {
   object-fit: contain;
 }
 
-@media screen and (min-width: 767px) {
+/* @media screen and (min-width: 767px) {
   img {
     width: 150px;
   }
-}
+} */
 
 .CardText {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #cc0011;
+}
+
+@media screen and (max-width: 430px) {
+  .myCard {
+    width: 11rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .myCard {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 325px) {
+  .myCard {
+    width: 8rem;
+  }
+  .ImageDiv > img {
+    width: 100px;
+  }
 }

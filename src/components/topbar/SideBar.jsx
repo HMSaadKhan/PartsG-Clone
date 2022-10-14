@@ -19,7 +19,7 @@ export default function SideBar() {
         Open
       </List>
       <>
-        <Offcanvas className="offcanvas-menu" isOpen={open}>
+        <Offcanvas className="offcanvas-menu CloseButton" isOpen={open}>
           <OffcanvasHeader
             style={{ color: "white" }}
             toggle={() => {

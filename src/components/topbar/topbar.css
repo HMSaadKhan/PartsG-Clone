@@ -108,6 +108,12 @@
   padding-right: 50px;
 }
 
+.btn-close {
+  color: white !important;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
 .ListItem {
   color: white;
   border-bottom: 1px solid white;
@@ -123,7 +129,7 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 450px) {
   .mobile-view {
     display: none;
   }
@@ -150,5 +156,38 @@
 @media screen and (min-width: 480px) {
   .mobile-view-slider {
     display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .mytopbar {
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .mytopbar,
+  .Img {
+    height: 50px;
+    width: 120px;
+  }
+  .Options {
+    margin: 5px;
+  }
+  .Options > div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mytopbar,
+  .Img {
+    height: 50px;
+    width: 110px;
+  }
+  .Options {
+    margin: 4px;
+  }
+  .Options > div {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 }

@@ -24,9 +24,8 @@ const SideBarDropDown = () => {
           <div
             style={{
               borderTop: "1px solid white",
-              borderRight: "1px solid white",
-              borderBottom: "1px solid white",
               height: "200px",
+              marginBottom: "10px",
               overflowY: "auto",
             }}
           >

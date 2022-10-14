@@ -19,3 +19,7 @@
 .button:hover {
   background-color: #060608;
 }
+
+img {
+  width: 150px;
+}

@@ -1,6 +1,14 @@
 import React from "react";
 
-export default function ImageComponent({ data, setnext, setprev }) {
+import { ImageData } from "../../common";
+import CustomCarouselButton from "./CustomCarouselButton";
+export default function ImageComponent({
+  data,
+  setNext,
+  setPrev,
+  selectedButton,
+  setSelectedButton,
+}) {
   return (
     <div
       key={data.id}
@@ -24,33 +32,18 @@ export default function ImageComponent({ data, setnext, setprev }) {
             <button className="shopNow">Shop Now</button>
           </div>
           <div className="buttonBg">
-            <button
-              onClick={() => {
-                setnext(1);
-                setprev(0);
-              }}
-              className="SelectionButton"
-            >
-              1
-            </button>
-            <button
-              onClick={() => {
-                setnext(2);
-                setprev(1);
-              }}
-              className="SelectionButton"
-            >
-              2
-            </button>
-            <button
-              onClick={() => {
-                setnext(3);
-                setprev(2);
-              }}
-              className="SelectionButton"
-            >
-              3
-            </button>
+            {ImageData.map((data, index) => {
+              return (
+                <CustomCarouselButton
+                  key={index}
+                  index={index}
+                  setNext={setNext}
+                  setPrev={setPrev}
+                  selectedButton={selectedButton}
+                  setSelectedButton={setSelectedButton}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

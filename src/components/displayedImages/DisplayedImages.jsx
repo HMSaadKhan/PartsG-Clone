@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import Carousel from "react-elastic-carousel";
+// import Carousel from "react-elastic-carousel";
 
-import { ImageData, breakPointsforImages } from "../../common";
+import { ImageData } from "../../common";
 import "./displayedimages.css";
 import ImageComponent from "./ImageComponent";
 
 export default function DisplayedImages() {
-  const [prev, setprev] = useState(0);
-  const [next, setnext] = useState(1);
+  const [prev, setPrev] = useState(0);
+  const [next, setNext] = useState(1);
+  const [selectedButton, setSelectedButton] = useState(0);
 
   return (
     <div className="Imagemain">
@@ -19,7 +20,14 @@ export default function DisplayedImages() {
             className="carousel"
             style={{ backgroundImage: `url(${data.link})` }}
           >
-            <ImageComponent data={data} setnext={setnext} setprev={setprev} />;
+            <ImageComponent
+              data={data}
+              setNext={setNext}
+              setPrev={setPrev}
+              selectedButton={selectedButton}
+              setSelectedButton={setSelectedButton}
+            />
+            ;
           </div>
         );
       })}
