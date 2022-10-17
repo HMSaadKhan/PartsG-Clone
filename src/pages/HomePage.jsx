@@ -13,7 +13,7 @@ export default function HomePage() {
       <TopBar />
       <NavBar />
       <DisplayedImages />
-      <Brands />
+      {/* <Brands /> */}
       <Categories />
       <Products />
       <BottomForm />
