@@ -10,22 +10,7 @@ export default function Brands() {
   return (
     <>
       <div className="brandsmain">
-        <Carousel
-          ref={carRef}
-          breakPoints={breakPoints}
-          enableAutoPlay
-          // onChange={() => {
-          //   const activeIndex = carRef.current.state.activeIndex;
-          //   const activePage = carRef.current.state.activePage;
-          //   let lastIndex =
-          //     carRef.current.props.children.length - activeIndex / activePage;
-          //   console.log({ activeIndex, lastIndex, activePage });
-
-          //   if (activeIndex === lastIndex) {
-          //     carRef.current.goTo(carRef.current.state.pages[0]);
-          //   }
-          // }}
-        >
+        <Carousel ref={carRef} breakPoints={breakPoints} enableAutoPlay>
           {BrandsData.map((Brand) => {
             return (
               <div className="maindiv" key={Brand.id}>

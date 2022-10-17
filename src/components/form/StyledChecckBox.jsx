@@ -2,10 +2,18 @@ import React from "react";
 
 import "./form.css";
 
-const StyledCheckBox = ({ name }) => {
+const StyledCheckBox = ({ name, checkBox, setCheckBox }) => {
   return (
     <div className="CheckBox">
-      <input type="checkbox" name={name} />
+      <input
+        style={{ backgroundColor: "#cc0011" }}
+        type="checkbox"
+        name={name}
+        checked={checkBox === name ? true : false}
+        onClick={() => {
+          setCheckBox(name);
+        }}
+      />
       <label>{name}</label>
     </div>
   );

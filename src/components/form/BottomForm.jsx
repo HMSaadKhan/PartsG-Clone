@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./form.css";
 import { Icons } from "../../common";
 import { ImageComponent, StyledCheckBox, StyledInput } from "../form";
 
 const BottomForm = () => {
+  const [checkBox, setCheckBox] = useState("");
   const [imageList, setImageList] = React.useState([]);
   const { BS } = Icons;
 
@@ -60,9 +61,21 @@ const BottomForm = () => {
         <div className="Heading2">Condition Preference</div>
         <div className="CheckBoxMain">
           <div>
-            <StyledCheckBox name="New" />
-            <StyledCheckBox name="Used" />
-            <StyledCheckBox name="Recondition" />
+            <StyledCheckBox
+              name="New"
+              checkBox={checkBox}
+              setCheckBox={setCheckBox}
+            />
+            <StyledCheckBox
+              name="Used"
+              checkBox={checkBox}
+              setCheckBox={setCheckBox}
+            />
+            <StyledCheckBox
+              name="Recondition"
+              checkBox={checkBox}
+              setCheckBox={setCheckBox}
+            />
           </div>
           <div>
             <button>submit</button>
