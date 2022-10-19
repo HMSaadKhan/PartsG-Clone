@@ -1,5 +1,3 @@
-import Image from "./MovingImage.jpg";
-
 export const ProductsData = [
   {
     id: 0,
@@ -79,5 +77,34 @@ export const ProductsData = [
     name: "Coupling",
     model: "12135",
     price: "5,656,664",
+  },
+];
+export const Cart = [
+  {
+    id: 0,
+    link: "https://backend.partsg.com/storage/528/conversions/piplines-(1)-thumb.jpg",
+    name: "Pipes",
+    model: "12135",
+    price: "5745",
+    stock: 25,
+    qty: 20,
+  },
+  {
+    id: 1,
+    link: "https://backend.partsg.com/storage/529/conversions/Tools-(1)-thumb.jpg",
+    name: "Tools",
+    model: "12135",
+    price: "51234",
+    stock: 10,
+    qty: 2,
+  },
+  {
+    id: 3,
+    link: "https://backend.partsg.com/storage/523/conversions/sub-catogries-thumb.jpg",
+    name: "Filteration",
+    model: "12135",
+    price: "65664",
+    stock: 5,
+    qty: 1,
   },
 ];

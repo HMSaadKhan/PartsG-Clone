@@ -56,8 +56,8 @@
   outline: none;
 }
 
-.searchBar {
-  width: 450px;
+.search-bar {
+  width: 450px !important;
   height: 40px;
   border: 1px solid #cdcdcd;
 }
@@ -190,4 +190,22 @@
     margin-left: 2px;
     margin-right: 2px;
   }
+}
+
+.option-cart {
+  display: flex;
+  margin-right: -10px !important;
+}
+.option-badge {
+  background-color: #cc0011;
+  color: white;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 15px;
+  height: 17px;
+  text-align: center;
+  font-size: 10px;
+  position: relative;
+  bottom: 6px;
+  right: 7px;
 }

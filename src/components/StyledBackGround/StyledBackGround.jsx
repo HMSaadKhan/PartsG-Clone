@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { SignUpBg } from "../../assets/Photos";
 
 export const BackGround = styled.div`
@@ -8,6 +8,3 @@ export const BackGround = styled.div`
   background-size: 100% 100%;
   height: inherit;
 `;
-
-
-

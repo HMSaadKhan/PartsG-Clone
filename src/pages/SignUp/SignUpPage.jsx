@@ -3,16 +3,17 @@ import { Card } from "reactstrap";
 
 import "./signup.css";
 import { Icons } from "../../common";
-import { BackGround } from "./SignUpSCs";
+import { BackGround } from "../../components/StyledBackGround/StyledBackGround";
 import { PartsGLogo } from "../../assets/Photos";
-import { StyledButton } from "../../components/CustomButtons/StyledButton";
-import CustomInputField from "./CustomInputField";
-import SignUpFooter from "./SignUpFooter";
+import { StyledButton } from "../../components/StyledButtons/StyledButton";
+import StyledInputField from "../../components/StyledInputField/StyledInputField";
+import SignUpFooter from "../../components/footerforSignUpandSignIN/SignUpSignInFooter";
 
 const SignUpPage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const { BS } = Icons;
@@ -28,7 +29,7 @@ const SignUpPage = () => {
             <Card>
               <div className="RegisterationCard">
                 <div className="row">
-                  <CustomInputField
+                  <StyledInputField
                     icon={<BS.BsFillPersonFill />}
                     placeholder="First Name"
                     name="firstname"
@@ -37,53 +38,53 @@ const SignUpPage = () => {
                       setFirstName(e.target.value);
                     }}
                   />
-                  <CustomInputField
+                  <StyledInputField
                     icon={<BS.BsFillPersonFill />}
-                    placeholder="First Name"
-                    name="firstname"
-                    value={firstName}
+                    placeholder="Last Name"
+                    name="lastname"
+                    value={lastName}
                     onChange={(e) => {
-                      setFirstName(e.target.value);
-                    }}
-                  />
-                </div>
-                <div className="row">
-                  <CustomInputField
-                    icon={<BS.BsFillPersonFill />}
-                    placeholder="First Name"
-                    name="firstname"
-                    value={firstName}
-                    onChange={(e) => {
-                      setFirstName(e.target.value);
-                    }}
-                  />
-                  <CustomInputField
-                    icon={<BS.BsFillPersonFill />}
-                    placeholder="First Name"
-                    name="firstname"
-                    value={firstName}
-                    onChange={(e) => {
-                      setFirstName(e.target.value);
+                      setLastName(e.target.value);
                     }}
                   />
                 </div>
                 <div className="row">
-                  <CustomInputField
+                  <StyledInputField
                     icon={<BS.BsFillPersonFill />}
-                    placeholder="First Name"
-                    name="firstname"
-                    value={firstName}
+                    placeholder="Email"
+                    name="email"
+                    value={email}
                     onChange={(e) => {
-                      setFirstName(e.target.value);
+                      setEmail(e.target.value);
                     }}
                   />
-                  <CustomInputField
+                  <StyledInputField
                     icon={<BS.BsFillPersonFill />}
-                    placeholder="First Name"
-                    name="firstname"
-                    value={firstName}
+                    placeholder="0"
+                    name="phone"
+                    value={phone}
                     onChange={(e) => {
-                      setFirstName(e.target.value);
+                      setPhone(e.target.value);
+                    }}
+                  />
+                </div>
+                <div className="row">
+                  <StyledInputField
+                    icon={<BS.BsFillPersonFill />}
+                    placeholder="Password"
+                    name="password"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                  />
+                  <StyledInputField
+                    icon={<BS.BsFillPersonFill />}
+                    placeholder="Confirm Password"
+                    name="confirmPassword"
+                    value={confirmPassword}
+                    onChange={(e) => {
+                      setConfirmPassword(e.target.value);
                     }}
                   />
                 </div>

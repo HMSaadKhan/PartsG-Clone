@@ -3,4 +3,6 @@ import * as BS from "react-icons/bs";
 import * as RI from "react-icons/ri";
 import * as MD from "react-icons/md";
 import * as GR from "react-icons/gr";
-export { AI, BS, RI, MD, GR };
+import * as FC from "react-icons/fc";
+
+export { AI, BS, RI, MD, GR, FC };

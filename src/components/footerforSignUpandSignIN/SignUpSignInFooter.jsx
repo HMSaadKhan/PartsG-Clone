@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./signup.css";
+import "../../../src/pages/SignUp/signup.css";
 const SignUpFooter = () => {
   return (
     <div className="SignUpFooter">

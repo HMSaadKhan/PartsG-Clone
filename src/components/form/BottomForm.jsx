@@ -14,10 +14,12 @@ const BottomForm = () => {
   };
 
   return (
-    <div className="Formmain">
-      <div className="formHeading">On Demand Order</div>
-      <div className="formCaption">Ask for the product you are looking for</div>
-      <div className="InputFieldMain">
+    <div className="form-main">
+      <div className="form-heading">On Demand Order</div>
+      <div className="form-caption">
+        Ask for the product you are looking for
+      </div>
+      <div className="form-inputfield-main">
         <StyledInput name={"Name"} type="input" placeholder={"e.g. 9518-20"} />
         <StyledInput name={"Brand"} type="input" placeholder={"e.g. hammer"} />
         <StyledInput
@@ -38,7 +40,7 @@ const BottomForm = () => {
           placeholder={"e.g. short description"}
         />
 
-        <div className="InputField getImage">
+        <div className="form-inputfield form-getimage">
           <label>Image</label>
           <div>
             <BS.BsImageFill
@@ -58,8 +60,8 @@ const BottomForm = () => {
         ))}
       </div>
       <div>
-        <div className="Heading2">Condition Preference</div>
-        <div className="CheckBoxMain">
+        <div className="form-heading2">Condition Preference</div>
+        <div className="form-checkbox-main">
           <div>
             <StyledCheckBox
               name="New"

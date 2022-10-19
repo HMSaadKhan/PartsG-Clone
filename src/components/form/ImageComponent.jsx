@@ -6,9 +6,9 @@ export default function ImageComponent({ index, deleteImageList }) {
   const { AI, BS } = Icons;
   return (
     <div>
-      <div className="InputField">
+      <div className="form-inputfields">
         <label>Image</label>
-        <div className="ImageGetter">
+        <div className="form-image-getter">
           <div>
             <span>
               <BS.BsImageFill size={25} />

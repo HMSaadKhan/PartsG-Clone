@@ -1,10 +1,10 @@
-.Formmain {
+.form-main {
   padding: 30px 100px 30px;
   background-image: url("https://partsg.com/images/products/on-demand-order.png");
   /* background-repeat: no-repeat; */
 }
 
-.Heading2 {
+.form-heading2 {
   color: white;
   font-size: 30px;
   line-height: 1;
@@ -12,7 +12,7 @@
   text-align: left;
   margin: 10px;
 }
-.formHeading {
+.form-heading {
   color: white;
   font-size: 30px;
   line-height: 1;
@@ -20,52 +20,52 @@
   text-align: center;
 }
 
-.formCaption {
+.form-caption {
   color: white;
   text-align: center;
   padding-top: 8px;
   padding-bottom: 50px;
 }
 
-.InputFieldMain {
+.form-inputfield-main {
   display: flex;
   /* align-items: center; */
   justify-content: left;
   flex-wrap: wrap;
 }
-.InputField {
+.form-inputfield {
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
 
-label {
+.form-label {
   color: white;
   text-align: left;
   margin-bottom: 5px;
 }
-.InputField > div,
-.InputField > input,
+.form-inputfield > div,
+.form-inputfield > input,
 textarea {
   background-color: white;
   overflow: visible;
   padding: 8px 10px;
   border-radius: 7px;
-  width: 300px;
+  width: 300px !important;
 }
 
-.getImage > div {
+.form-getimage > div {
   width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.ImageGetter {
+.form-image-getter {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.InputField > div > div > span {
+.form-inputfield > div > div > span {
   margin-right: 10px;
 }
 
@@ -78,19 +78,19 @@ textarea:focus {
   color: #cc0011;
 }
 
-.CheckBox {
+.form-checkbox {
   display: flex;
   align-items: center;
   margin: 10px;
 }
-.CheckBox > label {
+.form-checkbox > label {
   margin-top: 5px;
   margin-bottom: 5px;
   color: white;
   font-size: 16px;
 }
 
-.CheckBox > input {
+.form-checkbox > input {
   margin-left: 5px;
   margin-right: 5px;
   width: 25px;
@@ -101,20 +101,20 @@ checkbox:checked {
   background-color: #cc0011;
 }
 
-.CheckBoxMain {
+.form-checkbox-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.CheckBoxMain > div {
+.form-checkbox-main > div {
   display: flex;
 }
-.CheckBoxMain > div > button:hover {
+.form-checkbox-main > div > button:hover {
   background-color: #060608;
 }
 
-.CheckBoxMain > div > button {
+.form-checkbox-main > div > button {
   background-color: #cc0011;
   color: white;
   width: 100px;
@@ -125,17 +125,17 @@ checkbox:checked {
 }
 
 @media screen and (max-width: 430px) {
-  .Formmain {
+  .form-main {
     padding: 30px 40px 30px;
   }
 }
 @media screen and (max-width: 380px) {
-  .Formmain {
+  .form-main {
     padding: 30px 30px 30px;
   }
 }
 @media screen and (max-width: 320px) {
-  .Formmain {
+  .form-main {
     padding: 30px 0px 30px;
   }
 }

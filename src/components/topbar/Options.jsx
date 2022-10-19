@@ -1,18 +1,32 @@
 import React from "react";
-import "./topbar.css";
+import { Badge } from "reactstrap";
 
+import "./topbar.css";
 import { Icons } from "../../common";
+import Cart from "../cartPopUp/Cart";
+import { useSelector } from "react-redux";
 
 export default function Options() {
   const { BS, GR } = Icons;
+  const [isOpen, setIsOpen] = React.useState(false);
 
+  const { cartItems } = useSelector((state) => state.cart);
   return (
     <div className="FlexBox-SA OptionMain">
-      <div className="FlexBox-SA Options">
-        <div>
+      <Cart isOpen={isOpen} setIsOpen={setIsOpen} />
+      <div
+        className="FlexBox-SA Options"
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+      >
+        <div className="option-cart">
           <BS.BsCart3 size={25} />
+          {cartItems.length > 0 && (
+            <div className="option-badge">{cartItems.length}</div>
+          )}
         </div>
-        <div className="mobile-view">
+        <div id="Popover1" className="mobile-view">
           <div className="ColumnFlex">
             <b>Cart</b>
             <div>Add Product</div>

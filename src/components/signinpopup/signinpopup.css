@@ -1,0 +1,42 @@
+.popover {
+  min-width: 300px;
+}
+
+.sigin-popup-main {
+  /* width: 200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 23px;
+}
+
+.sigin-popup-heading {
+  text-align: left;
+  width: 100%;
+  font-size: 13px;
+  color: #a4a7ac;
+  border-bottom: 1px solid #c4cbd8;
+}
+
+.signin-popup-logo {
+  margin: 15px;
+}
+.signin-popup-row {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 13px;
+}
+.signin-popup-row > div {
+  margin-left: 3px;
+}
+.signin-popup-text {
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid #f4f4f5;
+  background: #f4f4f5;
+  margin-bottom: 18px;
+  padding: 8px 50px;
+}

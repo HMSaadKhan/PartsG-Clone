@@ -13,7 +13,7 @@ export default function SearchBar() {
         <CustomDropdown option={option} setOption={setOption} />
       </div>
       <input
-        className="searchBar mobile-view"
+        className="search-bar mobile-view"
         type="search"
         placeholder="Search Products"
       />

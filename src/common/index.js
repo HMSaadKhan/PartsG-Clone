@@ -1,6 +1,6 @@
 import * as Icons from "./Icons";
 import { BrandsData } from "./BrandsData";
-import { ProductsData } from "./ProductsData";
+import { ProductsData, Cart } from "./ProductsData";
 import {
   breakPoints,
   breakPointsforImages,
@@ -21,4 +21,5 @@ export {
   CategoriesData,
   dropdownOptions,
   ImageData,
+  Cart,
 };

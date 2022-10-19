@@ -15,17 +15,15 @@ export default function Products() {
         heading={"Products"}
         caption={"Diverse Range of Products Available on the Platform"}
       />
-      <Carousel breakPoints={breakPointsForLargeCard} ref={carRef} enableAutoPlay>
+      <Carousel
+        breakPoints={breakPointsForLargeCard}
+        ref={carRef}
+        enableAutoPlay
+      >
         {ProductsData.map((data) => {
           return (
             <div className="maindiv" key={data.id}>
-              <LargeCard
-                link={data.link}
-                name={data.name}
-                price={data.price}
-                model={data.model}
-                stock={data.stock}
-              />
+              <LargeCard data={data} />
             </div>
           );
         })}

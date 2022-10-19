@@ -4,8 +4,8 @@ import "./form.css";
 
 const StyledInput = ({ name, placeholder, type, rows }) => {
   return (
-    <div className="InputField">
-      <label>{name}</label>
+    <div className="form-inputfield">
+      <label className="form-label">{name}</label>
       {type === "input" && <input placeholder={placeholder} name={name} />}
       {type === "textarea" && (
         <textarea

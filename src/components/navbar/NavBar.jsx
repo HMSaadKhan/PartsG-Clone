@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./navbar.css";
-import NavBarMobile from "./NavBarMobile";
+// import NavBarMobile from "./NavBarMobile";
 import NavBarWeb from "./NavBarWeb";
 
 export default function NavBar() {

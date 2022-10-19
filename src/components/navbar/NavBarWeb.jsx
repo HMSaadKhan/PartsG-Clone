@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Nav,
   NavItem,
@@ -8,9 +8,13 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
+
+import SignInPopup from "../signinpopup/SignInPopup";
+
 import "./navbar.css";
 
 export default function NavBarWeb() {
+  const [isLoginPopup, setIsLoginPopup] = useState(false);
   return (
     <>
       <Nav className="navbar">
@@ -37,7 +41,20 @@ export default function NavBarWeb() {
       </Nav>
       <Nav className="navbar">
         <NavItem>
-          <NavLink href="/components/">Login/Signup</NavLink>
+          <NavLink
+            id="login-Popover"
+            onClick={() => {
+              console.log(isLoginPopup);
+              setIsLoginPopup(!isLoginPopup);
+            }}
+          >
+            Login/Signup
+          </NavLink>
+
+          <SignInPopup
+            isLoginPopup={isLoginPopup}
+            setIsLoginPopup={setIsLoginPopup}
+          />
         </NavItem>
       </Nav>
     </>

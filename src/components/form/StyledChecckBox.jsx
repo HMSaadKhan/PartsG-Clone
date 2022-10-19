@@ -4,9 +4,8 @@ import "./form.css";
 
 const StyledCheckBox = ({ name, checkBox, setCheckBox }) => {
   return (
-    <div className="CheckBox">
+    <div className="form-checkbox">
       <input
-        style={{ backgroundColor: "#cc0011" }}
         type="checkbox"
         name={name}
         checked={checkBox === name ? true : false}

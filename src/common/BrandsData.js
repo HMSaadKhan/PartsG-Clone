@@ -1,5 +1,3 @@
-import Image from "./MovingImage.jpg";
-
 export const BrandsData = [
   {
     id: 0,

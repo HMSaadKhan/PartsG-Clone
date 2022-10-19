@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./signup.css";
+import "./input.css";
 
-const CustomInputField = ({ icon, name, value, placeholder, onChange }) => {
+const StyledInputField = ({ icon, name, value, placeholder, onChange }) => {
   return (
     <div className="InputField">
       <div>{icon}</div>
@@ -16,4 +16,4 @@ const CustomInputField = ({ icon, name, value, placeholder, onChange }) => {
   );
 };
 
-export default CustomInputField;
+export default StyledInputField;

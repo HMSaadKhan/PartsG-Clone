@@ -1,5 +1,3 @@
-import Image from "./MovingImage.jpg";
-
 export const CategoriesData = [
   {
     id: 0,
