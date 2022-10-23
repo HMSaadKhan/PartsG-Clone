@@ -1,5 +1,5 @@
 .ImageDiv {
-  height: 14rem;
+  height: 13rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,11 +13,15 @@ img {
 }
 
 .CardText {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.CardText > p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis !important;
   color: #cc0011;
-  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 430px) {

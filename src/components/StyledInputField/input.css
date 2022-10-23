@@ -31,3 +31,9 @@ input {
   width: 200px;
   margin: 10px;
 }
+
+.input-row {
+  display: flex;
+  width: 50px !important;
+  align-items: center;
+}

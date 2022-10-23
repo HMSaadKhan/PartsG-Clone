@@ -1,0 +1,39 @@
+.accordion-button {
+  font-size: 27px !important;
+  color: black !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  border-radius: 0% !important;
+}
+.accordion-button:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+  background-color: white !important;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-main {
+  margin-bottom: 25px !important;
+}
+
+.accordion-checkbox {
+  height: 15px !important;
+  width: 15px;
+  margin: 5px;
+}
+.accordion-checkbox-content {
+  margin: 10px;
+  margin-left: 20px;
+}
+.accordion-checkbox-main {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+.accordion-checkbox-text {
+  font-size: 18px;
+}

@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./component.css";
 
+
 const Header = ({ heading, caption }) => {
+  const navigate = useNavigate();
   return (
     <div className="Header">
       <div className="emptyDiv"></div>
@@ -11,7 +14,14 @@ const Header = ({ heading, caption }) => {
         <h6 className="CnPCaption">{caption}</h6>
       </div>
       <div>
-        <button className="button">View All {heading}</button>
+        <button
+          className="button"
+          onClick={() => {
+            navigate(heading);
+          }}
+        >
+          View All {heading}
+        </button>
       </div>
     </div>
   );

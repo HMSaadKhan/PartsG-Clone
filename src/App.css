@@ -35,3 +35,24 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.route-link {
+  cursor: pointer;
+}
+
+.card {
+  border-radius: 0px !important;
+}
+
+.breadcrumb-item.active,
+.breadcrumb-item:hover {
+  color: #cc0011;
+}
+.breadcrumb-item {
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}

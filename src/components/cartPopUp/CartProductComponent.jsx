@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 
 import "./cart.css";
@@ -18,7 +18,7 @@ const CartProductComponent = ({ item }) => {
       <div className="cart-content">
         <div className="cart-left">
           <div className="cart-image-container">
-            <img src={item.link} alt="product Image" className="cart-image" />
+            <img src={item.link} alt="product" className="cart-image" />
           </div>
           <div className="cart-counter">
             <div>
@@ -56,7 +56,7 @@ const CartProductComponent = ({ item }) => {
                 dispatch(deleteFromCart(item.id));
               }}
             >
-              <RI.RiDeleteBinLine size={30}/>
+              <RI.RiDeleteBinLine size={30} />
             </div>
           </div>
         </div>

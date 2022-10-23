@@ -17,10 +17,10 @@ const Categories = () => {
       />
 
       <Carousel breakPoints={breakPoints} ref={carRef} enableAutoPlay>
-        {CategoriesData.map((data) => {
+        {CategoriesData.map((Category) => {
           return (
-            <div className="maindiv" key={data.id}>
-              <SmallCard link={data.link} name={data.name} />
+            <div className="maindiv" key={Category.id}>
+              <SmallCard Category={Category} />
             </div>
           );
         })}

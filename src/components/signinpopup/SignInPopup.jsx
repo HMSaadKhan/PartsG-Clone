@@ -1,23 +1,26 @@
 import React, { useState } from "react";
 
-import { Popover, PopoverBody, PopoverHeader } from "reactstrap";
+import { Popover, PopoverBody } from "reactstrap";
 
 import "./signinpopup.css";
 import { PartsGLogo } from "../../assets/Photos";
-import StyledInputField from "../../components/StyledInputField/StyledInputField";
-import { Icons } from "../../common";
+// import StyledInputField from "../../components/StyledInputField/StyledInputField";
+import { Icons, route } from "../../common";
 import { GoogleButton, StyledButton } from "../StyledButtons/StyledButton";
 import StyledInputFieldsm from "../StyledInputField/StyledInputFieldsm";
+import { useNavigate } from "react-router-dom";
 
 const SignInPopup = ({ isLoginPopup, setIsLoginPopup }) => {
   const { BS } = Icons;
   const size = 20;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const navigate = useNavigate();
   return (
     <Popover
       placement="bottom"
       target="login-Popover"
+      trigger="legacy"
       toggle={() => {
         setIsLoginPopup(!isLoginPopup);
       }}
@@ -65,7 +68,12 @@ const SignInPopup = ({ isLoginPopup, setIsLoginPopup }) => {
           <div>
             <GoogleButton />
           </div>
-          <div className="signin-popup-text">
+          <div
+            className="signin-popup-text route-link"
+            onClick={() => {
+              navigate(route.SignUp);
+            }}
+          >
             <div>or</div>
             <div>Register for signup</div>
           </div>

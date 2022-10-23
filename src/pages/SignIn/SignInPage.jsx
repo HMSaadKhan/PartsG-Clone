@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Card } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 
 import "./signin.css";
-import { Icons } from "../../common";
+import { Icons, route } from "../../common";
 import { BackGround } from "../../components/StyledBackGround/StyledBackGround";
 import { PartsGLogo } from "../../assets/Photos";
 import { StyledButton } from "../../components/StyledButtons/StyledButton";
@@ -12,6 +13,7 @@ import SignUpFooter from "../../components/footerforSignUpandSignIN/SignUpSignIn
 const SignInPage = () => {
   const [firstName, setFirstName] = useState("");
   const { BS, FC } = Icons;
+  const navigate = useNavigate();
   return (
     <div className="SignUpContainer">
       <BackGround>
@@ -44,7 +46,7 @@ const SignInPage = () => {
                   />
                 </div>
                 <div className="row">
-                  <div className="forget-password">
+                  <div className="forget-password route-link">
                     <div>Forget Password</div>
                   </div>
                 </div>
@@ -66,7 +68,7 @@ const SignInPage = () => {
                 <div className="row">
                   <div className="SignInButton">
                     <StyledButton>Login</StyledButton>
-                    <button className="google-button" disabled>
+                    <button className="google-button route-link" disabled>
                       <div>
                         <FC.FcGoogle size={20} />
                       </div>
@@ -77,7 +79,12 @@ const SignInPage = () => {
                 <hr />
                 <div className="bottomtext">
                   <div>or</div>
-                  <div className="bottomtext2">
+                  <div
+                    className="bottomtext2 route-link"
+                    onClick={() => {
+                      navigate(route.SignUp);
+                    }}
+                  >
                     <div>Register For Signup</div>
                   </div>
                 </div>

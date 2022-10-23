@@ -6,8 +6,9 @@ export const StyledButton = styled.button`
   border-radius: 50px;
   background-color: #cc0011;
   color: #fff;
-  width: 85px;
-  height: 30px;
+  width: auto;
+  padding: 5px 15px;
+  height: auto;
   border: none;
   &:hover {
     background-color: #3d464d;
@@ -17,7 +18,7 @@ export const StyledButton = styled.button`
 const GoogleButton = () => {
   const { FC } = Icons;
   return (
-    <button className="google-button" disabled>
+    <button className="google-button route-link" disabled>
       <div>
         <FC.FcGoogle size={20} />
       </div>

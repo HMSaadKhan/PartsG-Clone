@@ -1,26 +1,32 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import AppRoutes from "./common/AppRoutes";
+import { route } from "./common";
+import HomePage from "./pages/HomePage";
+import NavBar from "./components/navbar/NavBar";
+import TopBar from "./components/topbar/TopBar";
+import Footer from "./components/footer/Footer";
+import SignUpPage from "./pages/SignUp/SignUpPage";
+import SignInPage from "./pages/SignIn/SignInPage";
+import CategoriesPage from "./pages/categoriespage/CategoriesPage";
+import ProductsPage from "./pages/productspage/ProductsPage";
+import ShoppingPersonalInfo from "./pages/shoppingpersonalinfo/ShoppingPersonalInfo";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          {AppRoutes.map((route) => {
-            return (
-              <Route
-                key={route.path}
-                path={route.path}
-                element={route.element}
-              />
-            );
-          })}
-        </Routes>
-      </Router>
+      <TopBar />
+      <NavBar />
+      <Routes>
+        <Route path={route.Home} element={<HomePage />} />
+        <Route path={route.Login} element={<SignInPage />} />
+        <Route path={route.SignUp} element={<SignUpPage />} />
+        <Route path={route.Categories} element={<CategoriesPage />} />
+        <Route path={route.Products} element={<ProductsPage />} />
+        <Route path={route.Shop} element={<ShoppingPersonalInfo />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

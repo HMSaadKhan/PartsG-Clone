@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Card } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 
 import "./signup.css";
-import { Icons } from "../../common";
+import { Icons, route } from "../../common";
 import { BackGround } from "../../components/StyledBackGround/StyledBackGround";
 import { PartsGLogo } from "../../assets/Photos";
 import { StyledButton } from "../../components/StyledButtons/StyledButton";
@@ -17,6 +18,7 @@ const SignUpPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const { BS } = Icons;
+  const navigate = useNavigate();
   return (
     <div className="SignUpContainer">
       <BackGround>
@@ -98,7 +100,14 @@ const SignUpPage = () => {
                   <div>or</div>
                   <div className="bottomtext2">
                     <div>Already Have an Account?</div>
-                    <div>Login Instead</div>
+                    <div
+                      className="route-link"
+                      onClick={() => {
+                        navigate(route.Login);
+                      }}
+                    >
+                      Login Instead
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,111 @@
+.shopping-info-main {
+  flex: 1;
+}
+.shopping-info-content {
+  min-height: 80vh;
+  margin: 20px 70px 20px 70px;
+}
+
+.shopping-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+.product-info-row,
+.personal-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  /* width: 100%; */
+}
+.personal-info-row {
+  padding: 0px 10px;
+  /* width: 100%; */
+}
+.personal-info-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+  padding: 5px 10px;
+}
+.shopping-info-row > span {
+  font-size: 20px;
+}
+
+.shopping-info-hr {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.shopping-info-details {
+  display: flex;
+  justify-content: space-between;
+}
+.shopping-info-details-info {
+  width: 75%;
+  margin-right: 50px;
+  margin-top: 42px;
+}
+.shopping-info-details-summary {
+  width: 25%;
+  position: sticky;
+}
+
+.shopping-info-order-summary {
+  padding: 30px;
+}
+
+.shopping-info-order-summary-text {
+  font-weight: 500;
+}
+.shopping-info-order-summary-value {
+  font-weight: 700;
+}
+.shopping-info-order-summary-total {
+  font-weight: 700;
+  font-size: 21px;
+  color: #cc0011;
+}
+
+.shopping-info-place-order {
+  display: flex;
+  justify-content: right;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.shopping-info-product-info-border {
+  border: 1px solid;
+}
+
+.shopping-info-product-info {
+  padding: 20px;
+}
+
+.shopping-info-row-heading {
+  height: 40px;
+  background-color: aliceblue;
+}
+
+.personal-info-form {
+  padding: 10px 10px;
+}
+.personal-info-label {
+  margin-left: 13px;
+  color: black;
+}
+.personal-info-form-input {
+  width: 100%;
+  height: 40px;
+}
+.shopping-info-radio {
+  display: flex;
+  align-items: center;
+}
+.shopping-info-radio > input:checked {
+  accent-color: #cc0011 !important;
+}

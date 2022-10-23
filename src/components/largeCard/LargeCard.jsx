@@ -30,7 +30,6 @@ const LargeCard = ({ data }) => {
               <p className="modelNumber">{"Model#:" + data.model}</p>
               <p className="price">{"PKR " + data.price}</p>
             </div>
-
             <div className={`LargeCardButtons`}>
               <button
                 disabled={data.stock < 1 ? true : false}

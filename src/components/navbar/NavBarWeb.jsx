@@ -8,18 +8,28 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 
+import { route } from "../../common";
 import SignInPopup from "../signinpopup/SignInPopup";
 
 import "./navbar.css";
 
 export default function NavBarWeb() {
   const [isLoginPopup, setIsLoginPopup] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <Nav className="navbar">
         <NavItem>
-          <NavLink href="/components/">Home</NavLink>
+          <NavLink
+            className="route-link"
+            onClick={() => {
+              navigate(route.Home);
+            }}
+          >
+            Home
+          </NavLink>
         </NavItem>
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
@@ -33,18 +43,32 @@ export default function NavBarWeb() {
           </DropdownMenu>
         </UncontrolledDropdown>
         <NavItem>
-          <NavLink href="/components/">Brand</NavLink>
+          <NavLink
+            className="route-link"
+            onClick={() => {
+              navigate(route.Categories);
+            }}
+          >
+            Categories
+          </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/components/">Product</NavLink>
+          <NavLink
+            className="route-link"
+            onClick={() => {
+              navigate(route.Products);
+            }}
+          >
+            Product
+          </NavLink>
         </NavItem>
       </Nav>
       <Nav className="navbar">
         <NavItem>
           <NavLink
             id="login-Popover"
+            className="route-link"
             onClick={() => {
-              console.log(isLoginPopup);
               setIsLoginPopup(!isLoginPopup);
             }}
           >

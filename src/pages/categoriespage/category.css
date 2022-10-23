@@ -1,0 +1,27 @@
+.category-main {
+  flex: 1;
+}
+.category-content {
+  min-height: 80vh;
+  margin: 20px 70px 20px 70px;
+}
+
+.category-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category-row > span {
+  font-size: 20px;
+}
+
+.category-hr {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.category-products-row {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: center;
+}

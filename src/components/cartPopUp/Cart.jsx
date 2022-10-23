@@ -1,12 +1,15 @@
 import React from "react";
 import { Popover, PopoverBody, PopoverHeader } from "reactstrap";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import "./cart.css";
+import { route } from "../../common";
 import { StyledButton } from "../StyledButtons/StyledButton";
 import CartProductComponent from "./CartProductComponent";
 
 const Cart = ({ isOpen, setIsOpen }) => {
+  const navigate = useNavigate();
   const { cartItems, subtotal } = useSelector((state) => state.cart);
   return (
     <Popover
@@ -14,6 +17,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
       flip
       placement="bottom"
       target="Popover1"
+      trigger="legacy"
       toggle={() => {
         setIsOpen(!isOpen);
       }}
@@ -46,13 +50,26 @@ const Cart = ({ isOpen, setIsOpen }) => {
             </div>
           </PopoverHeader>
           <PopoverBody>
-            <StyledButton>Proceed</StyledButton>
+            <StyledButton
+              onClick={() => {
+                navigate(route.Shop);
+                setIsOpen(!isOpen);
+              }}
+            >
+              Proceed
+            </StyledButton>
           </PopoverBody>
         </>
       ) : (
         <div className="empty-cart">
           <p>You Shopping Cart is Empty</p>
-          <StyledButton>Cancel</StyledButton>
+          <StyledButton
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            Cancel
+          </StyledButton>
         </div>
       )}
     </Popover>

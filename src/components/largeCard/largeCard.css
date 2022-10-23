@@ -1,6 +1,7 @@
 .myLargeCard {
-  width: 270px;
+  width: 255px;
   height: auto;
+  margin: 10px;
 }
 
 .badgeMain {
@@ -57,7 +58,7 @@
 
 .LargeCardButtons > button {
   border: 1px solid #dddd;
-  width: calc(270px / 3);
+  width: calc(255px / 3);
   height: 100px;
   background-color: white;
   display: flex;

@@ -1,0 +1,103 @@
+.largecard-ls-main {
+  height: auto;
+  width: auto;
+  margin: 10px;
+}
+
+.largecard-ls-content {
+  display: flex;
+}
+
+.largecard-ls-content > div {
+  margin: 10px;
+}
+
+.largecard-ls-badge-main {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.largecard-ls-badge-main::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #cc0011;
+}
+
+.largecard-ls-badge {
+  background-color: #cc0011;
+  border-radius: 0px;
+  padding: 0px 8px 0px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: white;
+  height: 20px;
+  font-size: 15px;
+}
+
+.largecard-ls-main > img {
+  width: 70%;
+  object-fit: contain;
+}
+.largecard-ls-main {
+  padding: 20px;
+}
+
+.LargeCardButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.largecard-product-name,
+.largecard-product-model-number,
+.largecard-product-price {
+  text-align: left;
+  line-height: 19px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.largecard-product-price {
+  color: #cc0011;
+}
+
+.largecard-product-model-number {
+  font-size: 15px;
+  color: #9a9a9a;
+}
+
+.largecard-product-name:hover,
+.largecard-product-model-number:hover {
+  color: #cc0011;
+}
+
+@media screen and (max-width: 380px) {
+  .myLargeCard {
+    width: 220px;
+  }
+  .LargeCardButtons > button {
+    width: calc(220px / 3);
+  }
+}
+
+.largecard-product-buttons {
+}
+.largecard-product-buttons > button {
+  margin-right: 10px;
+}
+
+.largecard-product-request-buttons {
+  background-color: white !important;
+  color: #cc0011 !important;
+  border: 1px solid #cc0011 !important;
+}
+.largecard-product-request-buttons:hover {
+  background-color: #cc0011 !important;
+  color: white !important;
+}
