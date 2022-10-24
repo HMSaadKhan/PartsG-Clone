@@ -3,7 +3,7 @@
 }
 .category-content {
   min-height: 80vh;
-  margin: 20px 70px 20px 70px;
+  margin: 10px 65px 10px 65px;
 }
 
 .category-row {
@@ -12,7 +12,7 @@
   align-items: center;
 }
 .category-row > span {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .category-hr {

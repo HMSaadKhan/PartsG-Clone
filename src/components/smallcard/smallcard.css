@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 .myCard {
-  width: 14rem;
+  width: 13rem;
 }
 img {
   object-fit: contain;
@@ -16,6 +16,8 @@ img {
   margin-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  width: 150px;
+  text-align: center;
 }
 .CardText > p {
   white-space: nowrap;
