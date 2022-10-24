@@ -13,6 +13,7 @@ const StyledInputField = ({
   className,
   iconDropdown,
   iconArray,
+  type,
 }) => {
   console.log(iconArray);
   const { RI } = Icons;
@@ -50,6 +51,7 @@ const StyledInputField = ({
       <input
         name={name}
         value={value}
+        type={type}
         placeholder={placeholder}
         onChange={onChange}
       />

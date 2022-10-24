@@ -56,3 +56,4 @@ input[type="number"] {
 .breadcrumb-item + .breadcrumb-item::before {
   content: ">";
 }
+

@@ -68,3 +68,22 @@
 select {
   outline: none;
 }
+
+@media screen and (max-width: 430px) {
+  .product-content {
+    margin: 20px 20px 20px 20px;
+  }
+  .orientation-icons {
+    display: none;
+  }
+
+  .search-sm {
+    width: 150px;
+  }
+  .search-sm > input {
+    width: 100px !important;
+  }
+  .product-products-row {
+    justify-content: center;
+  }
+}

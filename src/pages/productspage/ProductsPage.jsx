@@ -15,7 +15,7 @@ const ProductsPage = () => {
       <div className="product-content">
         <div className="product-row">
           <h1>Products</h1>
-          <div>
+          <div className="mobile-view">
             <Breadcrumb>
               <BreadcrumbItem>Home</BreadcrumbItem>
               <BreadcrumbItem active>Products</BreadcrumbItem>
@@ -26,7 +26,7 @@ const ProductsPage = () => {
           {/* <div className="product-filter">filter side</div> */}
           <div className="product-right">
             <div className="product-row">
-              <div className="product-row">
+              <div className="product-row orientation-icons">
                 <AI.AiOutlineInsertRowLeft
                   size={25}
                   onClick={() => {
@@ -42,7 +42,9 @@ const ProductsPage = () => {
               </div>
 
               <div className="product-row">
-                <SmallSearch />
+                <div className="search-mobile-view">
+                  <SmallSearch />
+                </div>
 
                 <div className="product-row">
                   <div>Sort By &nbsp;</div>

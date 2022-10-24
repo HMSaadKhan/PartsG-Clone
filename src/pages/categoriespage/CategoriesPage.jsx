@@ -12,7 +12,7 @@ const CategoriesPage = () => {
       <div className="category-content">
         <div className="category-row">
           <h1>Shop By Categories</h1>
-          <div>
+          <div className="mobile-view">
             <Breadcrumb>
               <BreadcrumbItem>Home</BreadcrumbItem>
               <BreadcrumbItem active>Shop By Categories</BreadcrumbItem>

@@ -2,6 +2,7 @@ import React from "react";
 import { Icons } from "../../common";
 
 import StyledInputField from "../../components/StyledInputField/StyledInputField";
+import AddressDropDown from "./AddressDropDown";
 
 const AddressInformation = () => {
   const { MD, BS } = Icons;
@@ -10,41 +11,39 @@ const AddressInformation = () => {
     <div className="personal-info-form">
       <div className="personal-info-row">
         <div className="personal-info-column">
-          <label className="personal-info-label">Email*</label>
+          <label className="personal-info-label">Delivery Address</label>
           <StyledInputField
             className="personal-info-form-input"
-            icon={<MD.MdOutlineMail size={25} />}
+            placeholder="Address"
           />
         </div>
 
         <div className="personal-info-column">
-          <label className="personal-info-label">Phone Number*</label>
-          <StyledInputField
-            //   iconDropdown
-            iconArray={[
-              { icon: <BS.BsFillPersonFill size={25} /> },
-              { icon: <BS.BsFillPersonFill size={25} /> },
-            ]}
-            className="personal-info-form-input"
-            icon={<BS.BsFillPersonFill size={25} />}
-          />
+          <label className="personal-info-label">Country</label>
+          <AddressDropDown />
         </div>
       </div>
       <div className="personal-info-row">
         <div className="personal-info-column">
-          <label className="personal-info-label">First Name*</label>
-          <StyledInputField
-            className="personal-info-form-input"
-            icon={<BS.BsFillPersonFill size={25} />}
-          />
+          <label className="personal-info-label">State</label>
+          <AddressDropDown />
         </div>
         <div className="personal-info-column">
-          <label className="personal-info-label"> Last Name*</label>
+          <label className="personal-info-label">City</label>
+          <AddressDropDown />
+        </div>
+      </div>
+
+      <div className="personal-info-row">
+        <div className="personal-info-column">
+          <label className="personal-info-label">Zip</label>
           <StyledInputField
-            className="personal-info-form-input"
-            icon={<BS.BsFillPersonFill size={25} />}
+            className="personal-info-form-zip"
+            placeholder="0"
+            type="number"
           />
         </div>
+        <div className="personal-info-column"></div>
       </div>
     </div>
   );

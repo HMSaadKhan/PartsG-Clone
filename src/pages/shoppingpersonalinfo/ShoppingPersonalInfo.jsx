@@ -17,7 +17,7 @@ const ShoppingPersonalInfo = () => {
         <div className="shopping-info-row">
           <h1>Shopping Cart</h1>
 
-          <div>
+          <div className="shopping-breadcrumb">
             <Breadcrumb>
               <BreadcrumbItem>Home</BreadcrumbItem>
               <BreadcrumbItem active>Shopping Details</BreadcrumbItem>
@@ -45,11 +45,11 @@ const ShoppingPersonalInfo = () => {
             <ShopPageAccordion title="Payment">
               <div className="shopping-info-radio-mian">
                 <div className="shopping-info-radio">
-                  <input type="radio" name="cash on delivery" />
+                  <input type="radio" name="payment method" />
                   <span>Cash On Delivery</span>
                 </div>
                 <div className="shopping-info-radio">
-                  <input type="radio" name="cash on delivery" />
+                  <input type="radio" name="payment method" />
                   <span>Pay Online</span>
                 </div>
               </div>
