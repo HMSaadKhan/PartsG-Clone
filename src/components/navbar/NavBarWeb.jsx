@@ -14,9 +14,12 @@ import { route } from "../../common";
 import SignInPopup from "../signinpopup/SignInPopup";
 
 import "./navbar.css";
+import AccountPopup from "../Accountpopup/AccountPopup";
 
 export default function NavBarWeb() {
   const [isLoginPopup, setIsLoginPopup] = useState(false);
+  const [isAccountPopup, setIsAccountPopup] = useState(false);
+
   const navigate = useNavigate();
   return (
     <>
@@ -64,6 +67,18 @@ export default function NavBarWeb() {
         </NavItem>
       </Nav>
       <Nav className="navbar">
+        <NavItem>
+          <NavLink
+            id="account-Popover"
+            className="route-link"
+            onClick={() => {
+              setIsAccountPopup(!isAccountPopup);
+            }}
+          >
+            Account
+          </NavLink>
+          <AccountPopup isOpen={isAccountPopup} setIsOpen={setIsAccountPopup} />
+        </NavItem>
         <NavItem>
           <NavLink
             id="login-Popover"

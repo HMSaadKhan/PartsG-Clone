@@ -1,0 +1,51 @@
+.chat-popover {
+  max-width: 420px;
+  min-height: 250px;
+}
+
+.buyer-chat-list-card {
+  border-radius: 10px !important;
+  margin: 5px 2px;
+}
+
+.buyer-chat-component {
+  max-height: 300px;
+  min-height: 300px;
+  overflow-y: scroll;
+}
+
+.chat-list-component-card {
+  border-radius: 10px !important;
+  width: 18vw;
+  margin-bottom: 5px;
+}
+.buyer-chat-list-card:hover {
+  background-color: #cc0011;
+  color: white;
+}
+.buyer-chat-list-component-body {
+  display: flex;
+  justify-content: space-evenly;
+}
+.buyer-chat-list-image-container {
+  width: 60px;
+}
+.buyer-chat-list-image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.buyer-chat-name {
+  width: 80%;
+  margin: 5px;
+}
+.buyer-messages {
+  /* align-self: flex-end; */
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.buyer-messages-area {
+  align-self: flex-end;
+}

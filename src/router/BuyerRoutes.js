@@ -14,6 +14,8 @@ import {
   SignInPage,
   SignUpPage,
   CategoriesPage,
+  OrdersPage,
+  OrderDetailPage,
 } from "../pages/Buyer";
 
 const BuyerRoutes = () => {
@@ -28,6 +30,8 @@ const BuyerRoutes = () => {
         <Route path={route.Categories} element={<CategoriesPage />} />
         <Route path={route.Products} element={<ProductsPage />} />
         <Route path={route.Shop} element={<ShoppingPersonalInfo />} />
+        <Route path={route.orders} element={<OrdersPage />} />
+        <Route path={route.orderdetail} element={<OrderDetailPage />} />
       </Routes>
       <Footer />
     </>

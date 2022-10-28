@@ -624,6 +624,27 @@ export const OrderMenu = [
   "Action",
 ];
 
+export const orders = [
+  {
+    _id: "62e8d671052cd68a8d538ef3",
+    customerId: "62df7951fcc4994ffeeb865e",
+    orderId: "469198c",
+    status: "pending",
+    totalPrice: 25000,
+    deliveryDate: "2022/08/04",
+    __v: 0,
+  },
+  {
+    _id: "62e8ee37465eebfa0440d403",
+    customerId: "62df7951fcc4994ffeeb865e",
+    orderId: "d62450e",
+    status: "pending",
+    totalPrice: 25000,
+    deliveryDate: "2022/08/04",
+    __v: 0,
+  },
+];
+
 export const roles = [
   {
     _id: "6299b8cd398e41c87d5b3606",
@@ -633,6 +654,23 @@ export const roles = [
   {
     _id: "6299b8cd398e41c87d5b3607",
     name: "Shop",
+    __v: 0,
+  },
+];
+
+export const orderdetail = [
+  {
+    _id: "62e8ee38465eebfa0440d408",
+    orderId: "62e8ee37465eebfa0440d403",
+    productId: {
+      _id: "62e3a022e68072c6d5e41eae",
+      imageUrl:
+        "https://res.cloudinary.com/dyppzmrda/image/upload/v1659084834/w9dadjl4vgggbahuuhfq.jpg",
+    },
+    shopId: "62d126f59bf857970c7b7beb",
+    quantity: 1,
+    unitPrice: 25000,
+    name: "Airpods Pro",
     __v: 0,
   },
 ];

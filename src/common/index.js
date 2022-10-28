@@ -23,11 +23,14 @@ import {
   ShopsMenu,
   size,
   roles,
+  orders,
+  orderdetail,
 } from "./Data";
 
 import { route, AdminRoutes } from "./AppRoutes";
 
 export {
+  orders,
   roles,
   size,
   Categories,
@@ -53,4 +56,5 @@ export {
   route,
   callCountries,
   amazonProducts,
+  orderdetail,
 };

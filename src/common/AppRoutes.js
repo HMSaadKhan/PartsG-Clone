@@ -4,7 +4,9 @@ export const route = {
   SignUp: "/signup",
   Categories: "/categories",
   Products: "/products",
-  Shop: "shop/shoppingpersonalinformation",
+  Shop: "shop/check-out",
+  orders: "orders",
+  orderdetail: "/orders/order-detail",
 };
 
 export const AdminRoutes = {

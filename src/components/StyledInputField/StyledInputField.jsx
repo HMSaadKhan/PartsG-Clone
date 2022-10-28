@@ -19,7 +19,13 @@ const StyledInputField = ({
 }) => {
   return (
     <div className="input-field-main">
-      <label>{label}</label>
+      {label ? (
+        <>
+          <label>{label}</label>
+        </>
+      ) : (
+        <></>
+      )}
       <div
         className={` ${className ? className : ""} ${
           multiline ? "styled-textarea" : "styled-inputfield"
@@ -41,6 +47,7 @@ const StyledInputField = ({
           />
         ) : (
           <input
+            className="styled-input"
             name={name}
             value={value}
             type={type}
@@ -48,7 +55,7 @@ const StyledInputField = ({
             onChange={onChange}
           />
         )}
-        {endIcon && <div>{endIcon}</div>}
+        {endIcon && <div className="icons route-link">{endIcon}</div>}
       </div>
     </div>
   );

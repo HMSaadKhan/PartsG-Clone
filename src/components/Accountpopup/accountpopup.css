@@ -1,0 +1,24 @@
+.popover {
+  /* min-width: 300px; */
+}
+
+.account-popup-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-popup-menu {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
+  margin: 2px 0px;
+}
+.account-popup-menu:hover {
+  background-color: #cc0011;
+  color: white;
+}
