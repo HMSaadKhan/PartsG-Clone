@@ -5,7 +5,7 @@ import {
   AccordionHeader,
   AccordionItem,
 } from "reactstrap";
-import { AddressInformation } from "../../pages/shoppingpersonalinfo";
+import { AddressInformation } from "../../pages/Buyer/shoppingpersonalinfo";
 
 import "./accordion.css";
 const ShopPageAccordion = (props) => {

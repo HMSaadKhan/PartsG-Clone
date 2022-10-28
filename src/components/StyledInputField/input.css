@@ -1,13 +1,25 @@
-.InputField {
+.styled-inputfield,
+.styled-dropdown-main,
+.styled-textarea {
   border: 1px solid #c4cbd8;
   display: flex;
-  height: 50px;
   flex-direction: row;
   align-items: center;
   width: 400px;
   margin: 1px;
 }
-.InputField > div,
+.styled-inputfield {
+  padding: 5px;
+  padding-left: 15px;
+}
+.styled-dropdown-main {
+  height: 40px;
+}
+.styled-textarea {
+  padding: 5px;
+  padding-left: 15px;
+}
+.styled-inputfield > div,
 .input-sm > div {
   width: 30px;
   margin-left: 10px;
@@ -17,11 +29,23 @@
   height: 35px;
 }
 
+.input-field-main > label {
+  margin-left: 10px;
+}
+.styled-dropdown,
 input {
   border: none;
-  height: 35px;
-  width: inherit !important;
+  width: 100% !important;
 }
+
+.styled-textarea > textarea {
+  width: 100% !important;
+}
+textarea {
+  border: none;
+  width: 100% !important;
+}
+
 .input-sm {
   border: 1px solid #c4cbd8;
   display: flex;
@@ -36,4 +60,16 @@ input {
   display: flex;
   width: 50px !important;
   align-items: center;
+}
+
+@media screen and (max-width: 430px) {
+  .styled-dropdown-main,
+  .styled-inputfield {
+    height: 30px;
+    width: auto;
+  }
+
+  .input-field-main {
+    width: 100%;
+  }
 }

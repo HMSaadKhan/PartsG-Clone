@@ -1,0 +1,37 @@
+.dashboard-card {
+  width: 250px;
+  height: 100px;
+  border-radius: 10px !important;
+}
+.dashboard-widget {
+  margin: 25px;
+}
+.dashboard-card-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.dashboard-widgets {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard-widget-count {
+  color: #cc0011;
+  font-size: x-large;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 430px) {
+  .dashboard-widgets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 380px) {
+  .dashboard-card {
+    width: 200px;
+  }
+}

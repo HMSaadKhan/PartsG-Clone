@@ -1,6 +1,5 @@
 import React from "react";
-import { Icons, callCountries } from "../../common";
-import { RI } from "../../common/Icons";
+import { Icons } from "../../common";
 
 import "./input.css";
 
@@ -11,50 +10,46 @@ const StyledInputField = ({
   placeholder,
   onChange,
   className,
-  iconDropdown,
-  iconArray,
+  multiline,
   type,
+  rows,
+  label,
+  startIcon,
+  endIcon,
 }) => {
-  console.log(iconArray);
-  const { RI } = Icons;
-  const [isOpen, setisOpen] = React.useState(false);
   return (
-    <div className={`InputField ${className ? className : ""}`}>
-      {iconDropdown ? (
-        <>
-          <div
-            className="input-row"
-            onClick={() => {
-              setisOpen(!isOpen);
-            }}
-          >
-            {icon}
-            <div>
-              <RI.RiArrowDropDownLine size={25} />
-            </div>
-            {isOpen && (
-              <>
-                {callCountries?.map((value, index) => {
-                  return (
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                      {value}
-                    </div>
-                  );
-                })}
-              </>
-            )}
-          </div>
-        </>
-      ) : (
-        <div>{icon}</div>
-      )}
-      <input
-        name={name}
-        value={value}
-        type={type}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
+    <div className="input-field-main">
+      <label>{label}</label>
+      <div
+        className={` ${className ? className : ""} ${
+          multiline ? "styled-textarea" : "styled-inputfield"
+        }`}
+      >
+        {icon && (
+          <>
+            <div>{icon}</div>
+          </>
+        )}
+        {multiline ? (
+          <textarea
+            name={name}
+            value={value}
+            type={type}
+            placeholder={placeholder}
+            onChange={onChange}
+            rows={rows ? rows : 2}
+          />
+        ) : (
+          <input
+            name={name}
+            value={value}
+            type={type}
+            placeholder={placeholder}
+            onChange={onChange}
+          />
+        )}
+        {endIcon && <div>{endIcon}</div>}
+      </div>
     </div>
   );
 };

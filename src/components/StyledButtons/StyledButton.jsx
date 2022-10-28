@@ -10,6 +10,7 @@ export const StyledButton = styled.button`
   padding: 5px 15px;
   height: auto;
   border: none;
+  margin: 5px;
   &:hover {
     background-color: #3d464d;
   }

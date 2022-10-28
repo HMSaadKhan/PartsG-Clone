@@ -1,0 +1,106 @@
+.admin-login-column {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.admin-signin-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.admin-login-input {
+  margin: 10px !important;
+  width: 250px !important;
+}
+
+.admin-login-card {
+  width: 20vw;
+  padding: 50px 20px 50px 20px;
+}
+
+.admin-sigin-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-sigin-button > button {
+  width: 250px;
+}
+.forget-password {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 230px;
+}
+
+.admin-role-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.admin-role-picker > input {
+  margin: 5px;
+  height: 15px !important;
+  width: 15px !important;
+}
+
+.keep-me-login > label {
+  color: #676767;
+  font-size: 18px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 430px) {
+  .Logo {
+    width: 250px;
+  }
+  .Heading {
+    font-size: large;
+    font-weight: 500;
+    align-items: left;
+  }
+  .admin-login-input {
+    margin: 10px !important;
+    width: 250px !important;
+  }
+  .admin-login-card {
+    width: 70vw;
+    padding: 50px 20px 10px 30px;
+  }
+  .SignUpFooter > div {
+    color: white;
+    font-weight: 500;
+  }
+  .InputField > div {
+    padding: 0px 0px;
+  }
+  input {
+    height: 28px;
+  }
+  .gqJkBJ {
+    background-size: cover !important;
+  }
+  .forget-password {
+    padding-right: 0px;
+  }
+  .keep-me-login {
+    padding-right: 140px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .myCard {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 325px) {
+  .myCard {
+    width: 8rem;
+  }
+  .ImageDiv > img {
+    width: 100px;
+  }
+}

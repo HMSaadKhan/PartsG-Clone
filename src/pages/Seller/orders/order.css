@@ -1,0 +1,87 @@
+.order-card {
+  width: 80vw;
+  margin: 15px;
+  height: 7vh;
+  border-radius: 10px !important;
+}
+
+.order-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  padding: 0px;
+}
+.order-card-body > div {
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+.order-card-image {
+  width: 40px;
+}
+.order-card-image > img {
+  width: 40px;
+  object-fit: contain;
+}
+
+.order-heading {
+  text-align: center;
+  font-size: large;
+  font-weight: 700 !important;
+  color: #cc0011;
+}
+
+.order-action {
+  display: flex;
+  justify-content: center;
+}
+.order-action > div {
+  margin-left: 5px;
+}
+
+.add-icon-button {
+  color: #cc0011;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.add-icon-button:hover {
+  color: white;
+  border-radius: 50%;
+  border: none;
+  background: #cc0011;
+}
+
+.order-status {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.pending {
+  color: #cc0011;
+}
+.delivered {
+  color: green;
+}
+
+.styled-button:disabled {
+  cursor: not-allowed;
+
+  pointer-events: none;
+  color: #c0c0c0;
+  background-color: green;
+}
+
+@media screen and (max-width: 430px) {
+  .order-card {
+    font-size: 14px;
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 325px) {
+  .order-card {
+    font-size: 10px;
+    width: 65vw;
+  }
+}

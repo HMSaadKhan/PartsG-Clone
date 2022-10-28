@@ -1,0 +1,68 @@
+.shops-card {
+  width: 80vw;
+  margin: 15px;
+  height: 7vh;
+  border-radius: 10px !important;
+}
+
+.shops-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  padding: 0px;
+}
+
+.shops-email {
+}
+.shops-card-body > div {
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+.shops-card-image {
+  width: 40px;
+}
+.shops-card-image > img {
+  width: 40px;
+  object-fit: contain;
+}
+
+.shops-heading {
+  text-align: center;
+  font-size: large;
+  font-weight: 700 !important;
+  color: #cc0011;
+}
+
+.add-icon-button {
+  color: #cc0011;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.add-icon-button:hover {
+  color: white;
+  border-radius: 50%;
+  border: none;
+  background: #cc0011;
+}
+
+@media screen and (max-width: 430px) {
+  .shops-card {
+    font-size: 14px;
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 380px) {
+  .shops-card {
+    font-size: 12px;
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 325px) {
+  .shops-card {
+    font-size: 10px;
+    width: 65vw;
+  }
+}

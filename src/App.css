@@ -57,3 +57,31 @@ input[type="number"] {
   content: ">";
 }
 
+.seller-admin-container {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 250px;
+}
+
+.icons {
+  margin: 5px !important;
+  padding-left: 10px !important;
+}
+
+@media screen and (min-width: 450px) {
+  .web-view {
+    display: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .seller-admin-container {
+    padding-left: 70px;
+  }
+  .icons {
+    display: flex;
+    padding-left: 8px !important;
+  }
+  .web-view {
+    display: flex !important;
+  }
+}

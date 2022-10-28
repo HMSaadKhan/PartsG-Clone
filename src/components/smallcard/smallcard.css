@@ -1,5 +1,6 @@
 .ImageDiv {
-  height: 13rem;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,19 +8,25 @@
 }
 .myCard {
   width: 13rem;
+  display: flex;
+  align-items: center;
 }
-img {
+
+.smallcard-image {
+  width: 100%;
   object-fit: contain;
+}
+.smallcard-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .CardText {
-  margin-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 150px;
   text-align: center;
 }
 .CardText > p {
+  width: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis !important;

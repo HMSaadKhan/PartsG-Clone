@@ -2,7 +2,7 @@ import React from "react";
 import { route } from "../../common";
 import { useNavigate } from "react-router-dom";
 
-import "../../../src/pages/SignUp/signup.css";
+import "../../pages/Buyer/SignUp/signup.css";
 const SignUpFooter = () => {
   const navigate = useNavigate();
   return (

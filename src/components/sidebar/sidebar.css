@@ -1,0 +1,26 @@
+.sidebar-main-container {
+  background-color: #cc0011;
+  width: 250px;
+  color: white;
+  font-size: 18px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 10px 15px 10px;
+  position: fixed;
+}
+
+.dashboard-card {
+  width: 250px;
+  height: 100px;
+}
+
+@media screen and (max-width: 430px) {
+  .sidebar-main-container {
+    width: 70px;
+  }
+  .sidebar-heading {
+    font-size: 14px;
+  }
+}

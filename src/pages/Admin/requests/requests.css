@@ -1,0 +1,67 @@
+.request-card {
+  width: 80vw;
+  margin: 15px;
+  height: 7vh;
+  border-radius: 10px !important;
+}
+
+.request-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  padding: 0px;
+}
+.request-card-body > div {
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+.request-card-image {
+  width: 40px;
+}
+.request-card-image > img {
+  width: 40px;
+  object-fit: contain;
+}
+
+.request-heading {
+  text-align: center;
+  font-size: large;
+  font-weight: 700 !important;
+  color: #cc0011;
+}
+
+.request-action {
+  display: flex;
+  justify-content: center;
+}
+.request-action > div {
+  margin-left: 5px;
+}
+
+.request-reject {
+  background-color: #cc0011;
+}
+.request-accept {
+  background-color: green !important;
+}
+.request-accept:hover {
+  background-color: #228b22 !important;
+}
+
+@media screen and (max-width: 430px) {
+  .request-card {
+    font-size: 14px;
+    width: 70vw;
+  }
+  .web-view {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 325px) {
+  .request-card {
+    font-size: 10px;
+    width: 65vw;
+  }
+}

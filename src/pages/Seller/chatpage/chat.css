@@ -1,0 +1,77 @@
+.chat-card {
+  width: 80vw;
+  height: 90vh;
+  margin: 10px;
+}
+.chat-list-card {
+  border-radius: 10px !important;
+  width: 20vw;
+  height: 80vh;
+}
+.chat-msgs-card {
+  border-radius: 10px !important;
+  width: 55vw;
+  height: 80vh;
+}
+.chat-list-component-card {
+  border-radius: 10px !important;
+  width: 18vw;
+  margin-bottom: 5px;
+}
+.chat-list-component-card:hover {
+  background-color: #cc0011;
+  color: white;
+}
+.chat-list-component-body {
+  display: flex;
+  justify-content: space-evenly;
+}
+.chat-messages {
+  width: auto;
+  height: 65vh;
+}
+
+.chat-input {
+  width: 100%;
+}
+
+.chat-row {
+  display: flex;
+}
+
+.chat-list-image-container {
+  width: 60px;
+}
+.chat-list-image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.chat-name {
+  width: 80%;
+  margin: 5px;
+}
+@media screen and (max-width: 430px) {
+  .chat-card {
+    width: 75vw;
+  }
+  .chat-list-component-body,
+  .chat-list-card-body {
+    padding: 0px;
+  }
+  .chat-list-component-card {
+    width: auto;
+    margin: 5px;
+  }
+  .chat-list-card {
+    width: 10vw;
+  }
+  .chat-list-component-card:hover {
+    background-color: white;
+  }
+}
+@media screen and (max-width: 320px) {
+  .chat-card {
+    width: 70vw;
+  }
+}
