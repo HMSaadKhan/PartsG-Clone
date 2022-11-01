@@ -9,6 +9,7 @@ import { Icons, route } from "../../common";
 import { GoogleButton, StyledButton } from "../StyledButtons/StyledButton";
 import StyledInputFieldsm from "../StyledInputField/StyledInputFieldsm";
 import { useNavigate } from "react-router-dom";
+import { useLogin } from "../../queries/userQueries";
 
 const SignInPopup = ({ isLoginPopup, setIsLoginPopup }) => {
   const { BS } = Icons;
@@ -16,6 +17,16 @@ const SignInPopup = ({ isLoginPopup, setIsLoginPopup }) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
+  const { mutate } = useLogin();
+
+  const login = () => {
+    const user = {
+      email,
+      password,
+    };
+    mutate(user);
+  };
+
   return (
     <Popover
       placement="bottom"
@@ -64,7 +75,7 @@ const SignInPopup = ({ isLoginPopup, setIsLoginPopup }) => {
             </div>
             <div>Forgot Password</div>
           </div>
-          <StyledButton>login</StyledButton>
+          <StyledButton onClick={login}>login</StyledButton>
           <div>
             <GoogleButton />
           </div>

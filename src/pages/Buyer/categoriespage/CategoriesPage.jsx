@@ -2,11 +2,16 @@ import React from "react";
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 
 import "./category.css";
-import { CategoriesData } from "../../../common";
 import SmallCard from "../../../components/smallcard/SmallCard";
 import SmallSearch from "../../../components/smallsearch/SmallSearch";
+import { AllCategories } from "../../../queries/AllCategories";
 
 const CategoriesPage = () => {
+  const { data, isError, error } = AllCategories();
+
+  if (isError) {
+    console.log(error);
+  }
   return (
     <div className="category-main">
       <div className="category-content">
@@ -22,12 +27,12 @@ const CategoriesPage = () => {
         <div className="category-row">
           <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
           <div>
-            <SmallSearch />
+            <SmallSearch placeholder="Search Category" />
           </div>
         </div>
         <hr className="category-hr" />
         <div className="category-products-row">
-          {CategoriesData.map((Category) => {
+          {data.data.categories.map((Category) => {
             return <SmallCard key={Category.id} Category={Category} />;
           })}
         </div>

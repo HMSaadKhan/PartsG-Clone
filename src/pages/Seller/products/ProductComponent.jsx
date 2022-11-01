@@ -11,7 +11,7 @@ const ProductComponent = ({ product }) => {
       <Card className="product-card">
         <CardBody className="product-card-body">
           <div className="product-card-image">
-            <img src={product.imageUrl} alt="product-image" />
+            <img src={product.imageUrl} alt="product" />
           </div>
           <div>{product.name}</div>
           <div>{product.brandName}</div>

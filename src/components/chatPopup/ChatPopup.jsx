@@ -1,23 +1,12 @@
 import React from "react";
-import {
-  Popover,
-  PopoverBody,
-  PopoverHeader,
-  Card,
-  CardBody,
-} from "reactstrap";
-
+import { Popover, PopoverBody } from "reactstrap";
 import "./chatpopup.css";
 import StyledInputField from "../StyledInputField/StyledInputField";
-import { useSelector } from "react-redux";
-import { conversations, route } from "../../common";
-import { useNavigate } from "react-router-dom";
-import ChatComponent from "./ChatComponent";
+import { conversations } from "../../common";
 import { StyledButton } from "../StyledButtons/StyledButton";
 import { Icons, size } from "../../common";
 
 const ChatPopup = ({ isOpen, setIsOpen }) => {
-  const navigate = useNavigate();
   const { MD } = Icons;
   //   const { cartItems, subtotal } = useSelector((state) => state.cart);
   return (

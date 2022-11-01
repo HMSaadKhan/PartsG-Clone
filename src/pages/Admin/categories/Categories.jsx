@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { AdminRoutes, Icons } from "../../../common";
+import { Icons } from "../../../common";
 import "./categories.css";
 import { Categories as AllCategories } from "../../../common";
 import SmallCard from "../../../components/smallcard/SmallCard";

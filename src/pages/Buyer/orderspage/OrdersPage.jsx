@@ -1,10 +1,8 @@
 import React from "react";
-import { Breadcrumb, BreadcrumbItem, Card, CardBody } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 
 import "./order.css";
-import { CategoriesData, orders } from "../../../common";
-import SmallCard from "../../../components/smallcard/SmallCard";
-import SmallSearch from "../../../components/smallsearch/SmallSearch";
+import { orders } from "../../../common";
 import OrderComponent from "./OrderComponent";
 
 const OrdersPage = () => {

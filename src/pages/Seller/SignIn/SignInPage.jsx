@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Card } from "reactstrap";
-import { useNavigate } from "react-router-dom";
 
 import "./signin.css";
-import { Icons, route } from "../../../common";
+import { Icons } from "../../../common";
 import { BackGround } from "../../../components/StyledBackGround/StyledBackGround";
 import { PartsGLogo } from "../../../assets/Photos";
 import { StyledButton } from "../../../components/StyledButtons/StyledButton";
@@ -12,7 +11,6 @@ import StyledInputField from "../../../components/StyledInputField/StyledInputFi
 const SignInPage = () => {
   const [firstName, setFirstName] = useState("");
   const { AI, RI } = Icons;
-  const navigate = useNavigate();
   return (
     <div className="admin-signin-container">
       <BackGround>

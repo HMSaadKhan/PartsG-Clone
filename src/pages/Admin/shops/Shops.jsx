@@ -4,7 +4,7 @@ import { Card, CardBody } from "reactstrap";
 import { ShopsMenu, Shops as ShopsData } from "../../../common";
 import ShopComponent from "./ShopComponent";
 
-import { AdminRoutes, Icons } from "../../../common";
+import { Icons } from "../../../common";
 import "./shops.css";
 import CreateShop from "../createshop/CreateShop";
 const Shops = () => {

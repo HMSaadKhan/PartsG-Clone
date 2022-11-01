@@ -40,11 +40,10 @@
   margin: 5px;
 }
 .buyer-messages {
-  /* align-self: flex-end; */
   min-height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .buyer-messages-area {
   align-self: flex-end;

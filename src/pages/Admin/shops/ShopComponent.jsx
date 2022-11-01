@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardBody } from "reactstrap";
 import { Icons } from "../../../common";
-import { StyledButton } from "../../../components/StyledButtons/StyledButton";
 
 const ShopComponent = ({ shop }) => {
   const { MD } = Icons;

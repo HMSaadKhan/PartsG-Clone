@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import HideSideBar from "../../Auth/HideSideBar";
 
 import { AdminRoutes, Icons } from "../../common";
 import StyledMenuItem from "../styledsidebarmenu/StyledMenuItem";

@@ -1,5 +1,4 @@
 import React from "react";
-import { Icons } from "../../common";
 
 import "./input.css";
 

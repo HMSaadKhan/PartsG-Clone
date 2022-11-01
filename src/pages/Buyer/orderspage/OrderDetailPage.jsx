@@ -3,7 +3,6 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody } from "reactstrap";
 
 import "./order.css";
 import { orderdetail } from "../../../common";
-import OrderComponent from "./OrderComponent";
 
 const OrderDetailPage = () => {
   return (
@@ -28,6 +27,7 @@ const OrderDetailPage = () => {
                   <img
                     src={orderdetail[0].productId.imageUrl}
                     className="order-detail-image"
+                    alt="order-detail"
                   />
                 </div>
                 <div>

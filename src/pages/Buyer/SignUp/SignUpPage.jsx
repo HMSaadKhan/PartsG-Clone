@@ -9,6 +9,7 @@ import { PartsGLogo } from "../../../assets/Photos";
 import { StyledButton } from "../../../components/StyledButtons/StyledButton";
 import StyledInputField from "../../../components/StyledInputField/StyledInputField";
 import SignUpFooter from "../../../components/footerforSignUpandSignIN/SignUpSignInFooter";
+import { useSignup } from "../../../queries/userQueries";
 
 const SignUpPage = () => {
   const [firstName, setFirstName] = useState("");
@@ -19,6 +20,19 @@ const SignUpPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const { BS } = Icons;
   const navigate = useNavigate();
+
+  const { mutate } = useSignup();
+
+  const signup = () => {
+    const user = {
+      name: firstName + lastName,
+      email,
+      phoneNumber: phone,
+      password,
+    };
+    mutate(user);
+  };
+
   return (
     <div className="SignUpContainer">
       <BackGround>
@@ -64,6 +78,7 @@ const SignUpPage = () => {
                     icon={<BS.BsFillPersonFill />}
                     placeholder="0"
                     name="phone"
+                    type="number"
                     value={phone}
                     onChange={(e) => {
                       setPhone(e.target.value);
@@ -74,6 +89,7 @@ const SignUpPage = () => {
                   <StyledInputField
                     icon={<BS.BsFillPersonFill />}
                     placeholder="Password"
+                    type="password"
                     name="password"
                     value={password}
                     onChange={(e) => {
@@ -82,6 +98,7 @@ const SignUpPage = () => {
                   />
                   <StyledInputField
                     icon={<BS.BsFillPersonFill />}
+                    type="password"
                     placeholder="Confirm Password"
                     name="confirmPassword"
                     value={confirmPassword}
@@ -91,8 +108,9 @@ const SignUpPage = () => {
                   />
                 </div>
                 <div className="row">
+                  <div></div>
                   <div className="SignUpButton">
-                    <StyledButton>Sign Up</StyledButton>
+                    <StyledButton onClick={signup}>Sign Up</StyledButton>
                   </div>
                 </div>
                 <hr />

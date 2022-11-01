@@ -6,15 +6,22 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter as Router } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { CookiesProvider } from "react-cookie";
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </Router>
+    <CookiesProvider>
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </Router>
+      </QueryClientProvider>
+    </CookiesProvider>
   </React.StrictMode>
 );
 

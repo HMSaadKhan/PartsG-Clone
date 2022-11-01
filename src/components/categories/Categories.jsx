@@ -2,12 +2,18 @@ import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
 
 import "./categories.css";
-import { breakPoints, CategoriesData } from "../../common";
+import { breakPoints } from "../../common";
 import SmallCard from "../smallcard/SmallCard";
 import { Footer, Header } from "../../components/CandPheaderandFooter";
+import { AllCategories } from "../../queries/AllCategories";
 
 const Categories = () => {
   const carRef = useRef();
+  const { data, isError, error } = AllCategories();
+
+  if (isError) {
+    console.log(error);
+  }
 
   return (
     <div className="categoriesMain">
@@ -17,7 +23,7 @@ const Categories = () => {
       />
 
       <Carousel breakPoints={breakPoints} ref={carRef} enableAutoPlay>
-        {CategoriesData.map((Category) => {
+        {data?.data.categories.map((Category) => {
           return (
             <div className="maindiv" key={Category.id}>
               <SmallCard Category={Category} />

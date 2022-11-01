@@ -9,11 +9,23 @@ import { PartsGLogo } from "../../../assets/Photos";
 import { StyledButton } from "../../../components/StyledButtons/StyledButton";
 import StyledInputField from "../../../components/StyledInputField/StyledInputField";
 import SignUpFooter from "../../../components/footerforSignUpandSignIN/SignUpSignInFooter";
+import { useLogin } from "../../../queries/userQueries";
 
 const SignInPage = () => {
-  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { BS, FC } = Icons;
   const navigate = useNavigate();
+  const { mutate } = useLogin();
+
+  const login = () => {
+    const user = {
+      email,
+      password,
+    };
+    mutate(user);
+  };
+
   return (
     <div className="SignUpContainer">
       <BackGround>
@@ -29,19 +41,20 @@ const SignInPage = () => {
                   <StyledInputField
                     icon={<BS.BsFillPersonFill />}
                     placeholder="Last Name"
-                    name="firstname"
-                    value={firstName}
+                    name="email"
+                    value={email}
                     onChange={(e) => {
-                      setFirstName(e.target.value);
+                      setEmail(e.target.value);
                     }}
                   />
                   <StyledInputField
                     icon={<BS.BsFillPersonFill />}
                     placeholder="First Name"
-                    name="firstname"
-                    value={firstName}
+                    name="email"
+                    type="password"
+                    value={password}
                     onChange={(e) => {
-                      setFirstName(e.target.value);
+                      setPassword(e.target.value);
                     }}
                   />
                 </div>
@@ -67,7 +80,7 @@ const SignInPage = () => {
 
                 <div className="row">
                   <div className="SignInButton">
-                    <StyledButton>Login</StyledButton>
+                    <StyledButton onClick={login}>Login</StyledButton>
                     <button className="google-button route-link" disabled>
                       <div>
                         <FC.FcGoogle size={20} />

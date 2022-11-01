@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Popover, PopoverBody } from "reactstrap";
 
 import "./accountpopup.css";
-import { PartsGLogo } from "../../assets/Photos";
-// import StyledInputField from "../../components/StyledInputField/StyledInputField";
-import { Icons, route } from "../../common";
-import { GoogleButton, StyledButton } from "../StyledButtons/StyledButton";
-import StyledInputFieldsm from "../StyledInputField/StyledInputFieldsm";
+import { route } from "../../common";
 import { useNavigate } from "react-router-dom";
 
 const AccountPopup = ({ isOpen, setIsOpen }) => {
-  const { BS } = Icons;
-  const size = 20;
   const navigate = useNavigate();
   return (
     <>
